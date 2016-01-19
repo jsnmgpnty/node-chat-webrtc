@@ -1,0 +1,944 @@
+/* line 3, main.scss */
+body {
+  background: white;
+}
+/* line 6, main.scss */
+body.font-en {
+  font-family: "HelveticaNeue", "Arial", "Helvetica";
+}
+
+/* line 11, main.scss */
+.font-en {
+  font-family: "HelveticaNeue", "Arial", "Helvetica" !important;
+}
+
+/* line 15, main.scss */
+.font-cs {
+  font-family: "Open Sans", "Arial", "Helvetica" !important;
+}
+
+/* line 19, main.scss */
+.font-black {
+  color: #232323;
+}
+
+/* line 23, main.scss */
+.font-white {
+  color: #8ac5fc;
+}
+
+/* line 27, main.scss */
+.font-primary {
+  color: #2296f3;
+}
+
+/* line 31, main.scss */
+.black-shadow {
+  text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 0 1px 0 black, 1px 0 0 black, 0 -1px 0 black, -1px 0 0 black, 2px -1px 0 black;
+}
+
+/* line 35, main.scss */
+.white-shadow {
+  text-shadow: 1px 1px 0 white, -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 0 1px 0 white, 1px 0 0 white, 0 -1px 0 white, -1px 0 0 white, 2px -1px 0 white;
+}
+
+/* line 39, main.scss */
+.top-pad {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* line 43, main.scss */
+.title {
+  font-weight: bold;
+}
+/* line 46, main.scss */
+.title span {
+  background: #ff9800;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  color: white;
+}
+
+/* line 54, main.scss */
+.body-content {
+  margin-top: 90px;
+}
+@media screen and (max-width: 767px) {
+  /* line 54, main.scss */
+  .body-content {
+    margin-top: 50px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  /* line 54, main.scss */
+  .body-content {
+    margin-top: 50px;
+  }
+}
+
+/* line 66, main.scss */
+.ui-view, *[ui-view], ui-view {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 70, main.scss */
+.input-error-field {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 0.85em;
+}
+
+/* line 75, main.scss */
+a {
+  color: #2296f3;
+  cursor: pointer;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+/* line 441, _variables.scss */
+a[disabled]:hover, a[disabled]:focus, a[disabled]:active, a[disabled]:active:focus, a[disabled]:active:hover, a[disabled]:hover:focus {
+  color: #2296f3;
+}
+/* line 446, _variables.scss */
+a:hover, a:focus, a:active, a:active:focus, a:active:hover, a:hover:focus {
+  color: #2296f3;
+}
+
+/* line 84, main.scss */
+select {
+  padding-left: 0 !important;
+  text-indent: 40px;
+}
+
+/* line 89, main.scss */
+textarea {
+  resize: none;
+  min-height: 75px;
+}
+
+/* line 94, main.scss */
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
+
+/* line 98, main.scss */
+.no-padding {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  /* line 103, main.scss */
+  select {
+    padding-left: 45px !important;
+    text-indent: 0 !important;
+  }
+}
+@-moz-document url-prefix() {
+  /* line 110, main.scss */
+  select {
+    padding-left: 0 !important;
+    text-indent: 20px;
+  }
+}
+
+/* #region snap drawer menus */
+/* line 118, main.scss */
+.snap-menu {
+  background: white;
+  position: initial;
+  width: 100%;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+}
+/* line 125, main.scss */
+.snap-menu.snap-menu-left {
+  -moz-box-shadow: inset -4px 0 16px -4px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset -4px 0 16px -4px rgba(0, 0, 0, 0.5);
+  box-shadow: inset -4px 0 16px -4px rgba(0, 0, 0, 0.5);
+}
+/* line 131, main.scss */
+.snap-menu.snap-menu-right {
+  -moz-box-shadow: inset 4px 0 16px -4px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 4px 0 16px -4px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 4px 0 16px -4px rgba(0, 0, 0, 0.5);
+}
+/* line 137, main.scss */
+.snap-menu ul {
+  list-style-type: none;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+/* line 141, main.scss */
+.snap-menu ul li a, .snap-menu ul li > div {
+  padding-top: 12px;
+  padding-right: 15px;
+  padding-left: 15px;
+  border-bottom: 1px solid #e6e6e6;
+  width: auto;
+  height: 50px;
+  line-height: 1.7;
+  color: #333333;
+  font-size: 1.2em;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  display: block;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+/* line 156, main.scss */
+.snap-menu ul li a i, .snap-menu ul li > div i {
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+/* line 168, main.scss */
+.snap-menu ul li a.nav-slider-header, .snap-menu ul li > div.nav-slider-header {
+  padding-top: 25px;
+  font-weight: bold;
+  font-size: 1em;
+  cursor: pointer;
+}
+/* line 172, main.scss */
+.snap-menu ul li a.nav-slider-active, .snap-menu ul li > div.nav-slider-active {
+  color: #2296f3;
+  background-color: #e6e6e6;
+  border-left: 4px solid #2296f3;
+  -moz-box-shadow: inset -7px 2px 6px -4px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: inset -7px 2px 6px -4px rgba(0, 0, 0, 0.4);
+  box-shadow: inset -7px 2px 6px -4px rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid #d9d9d9;
+}
+/* line 182, main.scss */
+.snap-menu ul li a.nav-slider-detail, .snap-menu ul li > div.nav-slider-detail {
+  width: auto;
+  height: auto;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+}
+/* line 187, main.scss */
+.snap-menu ul li a.nav-slider-detail div a, .snap-menu ul li > div.nav-slider-detail div a {
+  width: auto;
+  height: 45px;
+  padding-left: 30px;
+  font-size: 1em;
+  cursor: pointer;
+  line-height: 1;
+}
+/* line 199, main.scss */
+.snap-menu ul li.block a, .snap-menu ul li.block > div {
+  width: auto;
+  height: auto;
+}
+
+/* #endregion */
+/* #region form-group-set */
+/* line 211, main.scss */
+.btn-select {
+  margin-bottom: 5px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* line 216, main.scss */
+.btn-select .btn {
+  width: 100%;
+  height: auto;
+  padding-top: 6px;
+  padding-right: 12px;
+  padding-bottom: 6px;
+  padding-left: 45px;
+  color: #333333;
+  background-color: #ececec;
+  text-align: left;
+}
+/* line 226, main.scss */
+.btn-select .btn:disabled {
+  background-color: #ececec;
+}
+
+/* line 232, main.scss */
+.form-group-set {
+  margin-bottom: 15px;
+}
+/* line 235, main.scss */
+.form-group-set .form-group-set-header {
+  text-transform: uppercase;
+  font-size: 0.85em;
+}
+/* line 240, main.scss */
+.form-group-set .btn-group {
+  width: 100%;
+  height: auto;
+}
+/* line 244, main.scss */
+.form-group-set .dropdown-menu {
+  background: white;
+  width: 100%;
+}
+/* line 250, main.scss */
+.form-group-set .dropdown-menu > li.active a {
+  background-color: #2296f3;
+  color: white;
+}
+/* line 256, main.scss */
+.form-group-set .dropdown-menu > li > a {
+  color: #333333;
+}
+/* line 259, main.scss */
+.form-group-set .dropdown-menu > li > a:hover, .form-group-set .dropdown-menu > li > a:active, .form-group-set .dropdown-menu > li > a:focus {
+  background-color: #2296f3;
+  color: white;
+  cursor: pointer !important;
+}
+
+/* line 269, main.scss */
+.submit-button {
+  margin-top: 30px;
+  margin-bottom: 45px;
+  text-align: center;
+}
+/* line 275, main.scss */
+.submit-button .btn {
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-top: 9px;
+  padding-right: 24px;
+  padding-bottom: 9px;
+  padding-left: 24px;
+}
+
+/* #endregion */
+/* #region card class */
+/* line 288, main.scss */
+.card, .card-iconify, .card-inv, .card-primary, .card-success, .card-warning, .card-danger, .card-info, .card-default {
+  box-shadow: 0 2px 4px 0 #cccccc;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  vertical-align: top;
+  font-size: 1em;
+  color: #333333;
+  margin-bottom: 15px;
+}
+/* line 296, main.scss */
+.card .header, .card-iconify .header, .card-inv .header, .card-primary .header, .card-success .header, .card-warning .header, .card-danger .header, .card-info .header, .card-default .header {
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  border-bottom: 1px solid #e6e6e6;
+}
+/* line 301, main.scss */
+.card .content, .card-iconify .content, .card-inv .content, .card-primary .content, .card-success .content, .card-warning .content, .card-danger .content, .card-info .content, .card-default .content {
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  border-bottom: 1px solid #e6e6e6;
+}
+/* line 305, main.scss */
+.card .content:last-child, .card-iconify .content:last-child, .card-inv .content:last-child, .card-primary .content:last-child, .card-success .content:last-child, .card-warning .content:last-child, .card-danger .content:last-child, .card-info .content:last-child, .card-default .content:last-child {
+  border-bottom: 0;
+}
+/* line 310, main.scss */
+.card .captions, .card-iconify .captions, .card-inv .captions, .card-primary .captions, .card-success .captions, .card-warning .captions, .card-danger .captions, .card-info .captions, .card-default .captions {
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+/* line 313, main.scss */
+.card .captions p, .card-iconify .captions p, .card-inv .captions p, .card-primary .captions p, .card-success .captions p, .card-warning .captions p, .card-danger .captions p, .card-info .captions p, .card-default .captions p {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+/* line 317, main.scss */
+.card .captions p:first-of-type, .card-iconify .captions p:first-of-type, .card-inv .captions p:first-of-type, .card-primary .captions p:first-of-type, .card-success .captions p:first-of-type, .card-warning .captions p:first-of-type, .card-danger .captions p:first-of-type, .card-info .captions p:first-of-type, .card-default .captions p:first-of-type {
+  font-weight: bold;
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 5px;
+  margin-left: 0;
+}
+
+/* line 329, main.scss */
+.card-iconify .header {
+  margin-bottom: 30px;
+}
+/* line 333, main.scss */
+.card-iconify .content {
+  position: relative;
+}
+/* line 336, main.scss */
+.card-iconify .content .card-icon {
+  border-top-left-radius: 100% !important;
+  border-top-right-radius: 100% !important;
+  border-bottom-left-radius: 100% !important;
+  border-bottom-right-radius: 100% !important;
+  position: absolute;
+  top: -4.1em;
+  left: 50%;
+  width: 4em;
+  height: 4em;
+  display: block;
+  text-align: center;
+  margin-left: -2em;
+  line-height: 4.8em;
+}
+
+/* line 348, main.scss */
+.card-inv {
+  border: none;
+  background: transparent;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/* line 356, main.scss */
+.card-inv .header {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+/* line 361, main.scss */
+.card-primary {
+  color: #333333;
+  background: white;
+  border-top: 5px solid #1f85d8;
+}
+/* line 367, main.scss */
+.card-primary .header {
+  background: #2296f3;
+  color: white;
+}
+/* line 373, main.scss */
+.card-primary .content .card-icon {
+  color: white;
+  background: #2296f3;
+}
+
+/* line 380, main.scss */
+.card-success {
+  color: #333333;
+  background: white;
+  border-top: 5px solid #009103;
+}
+/* line 386, main.scss */
+.card-success .header {
+  background: #cff8d0;
+  color: white;
+}
+/* line 392, main.scss */
+.card-success .content .card-icon {
+  color: white;
+  background: #cff8d0;
+}
+
+/* line 399, main.scss */
+.card-warning {
+  color: #333333;
+  background: white;
+  border-top: 5px solid #ffcc00;
+}
+/* line 405, main.scss */
+.card-warning .header {
+  background: #ffcc00;
+  color: white;
+}
+/* line 411, main.scss */
+.card-warning .content .card-icon {
+  color: white;
+  background: #ffcc00;
+}
+
+/* line 418, main.scss */
+.card-danger {
+  color: #333333;
+  background: white;
+  border-top: 5px solid #ad0000;
+}
+/* line 424, main.scss */
+.card-danger .header {
+  background: #ff6666;
+  color: white;
+}
+/* line 430, main.scss */
+.card-danger .content .card-icon {
+  color: white;
+  background: #ff6666;
+}
+
+/* line 437, main.scss */
+.card-info {
+  color: #333333;
+  background: white;
+  border-top: 5px solid #347abb;
+}
+/* line 443, main.scss */
+.card-info .header {
+  background: #8ac5fc;
+  color: white;
+}
+/* line 449, main.scss */
+.card-info .content .card-icon {
+  color: white;
+  background: #8ac5fc;
+}
+
+/* line 456, main.scss */
+.card-default {
+  border-top: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+  color: #333333;
+  background: white;
+}
+/* line 462, main.scss */
+.card-default .card-icon {
+  color: white;
+  background: #2296f3;
+}
+/* line 467, main.scss */
+.card-default.darken {
+  background: #e6e6e6;
+}
+
+/* #endregion */
+/* #region action button */
+/* line 476, main.scss */
+.action {
+  font-weight: normal;
+  text-align: left;
+  color: white;
+  border-top: 1px solid white;
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+/* line 490, main.scss */
+.action i {
+  margin-right: 5px;
+}
+/* line 494, main.scss */
+.action.action-success {
+  background: #009103;
+  color: white;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+/* line 441, _variables.scss */
+.action.action-success[disabled]:hover, .action.action-success[disabled]:focus, .action.action-success[disabled]:active, .action.action-success[disabled]:active:focus, .action.action-success[disabled]:active:hover, .action.action-success[disabled]:hover:focus {
+  background: white;
+  color: #009103;
+  text-decoration: none;
+}
+/* line 446, _variables.scss */
+.action.action-success:hover, .action.action-success:focus, .action.action-success:active, .action.action-success:active:focus, .action.action-success:active:hover, .action.action-success:hover:focus {
+  background: white;
+  color: #009103;
+  text-decoration: none;
+}
+/* line 505, main.scss */
+.action.action-primary {
+  background: #2296f3;
+  color: white;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+/* line 441, _variables.scss */
+.action.action-primary[disabled]:hover, .action.action-primary[disabled]:focus, .action.action-primary[disabled]:active, .action.action-primary[disabled]:active:focus, .action.action-primary[disabled]:active:hover, .action.action-primary[disabled]:hover:focus {
+  background: white;
+  color: #2296f3;
+  text-decoration: none;
+}
+/* line 446, _variables.scss */
+.action.action-primary:hover, .action.action-primary:focus, .action.action-primary:active, .action.action-primary:active:focus, .action.action-primary:active:hover, .action.action-primary:hover:focus {
+  background: white;
+  color: #2296f3;
+  text-decoration: none;
+}
+/* line 516, main.scss */
+.action.action-secondary {
+  background: #ff9800;
+  color: white;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+/* line 441, _variables.scss */
+.action.action-secondary[disabled]:hover, .action.action-secondary[disabled]:focus, .action.action-secondary[disabled]:active, .action.action-secondary[disabled]:active:focus, .action.action-secondary[disabled]:active:hover, .action.action-secondary[disabled]:hover:focus {
+  background: white;
+  color: #ff9800;
+  text-decoration: none;
+}
+/* line 446, _variables.scss */
+.action.action-secondary:hover, .action.action-secondary:focus, .action.action-secondary:active, .action.action-secondary:active:focus, .action.action-secondary:active:hover, .action.action-secondary:hover:focus {
+  background: white;
+  color: #ff9800;
+  text-decoration: none;
+}
+/* line 527, main.scss */
+.action.action-danger {
+  background: #ad0000;
+  color: white;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+/* line 441, _variables.scss */
+.action.action-danger[disabled]:hover, .action.action-danger[disabled]:focus, .action.action-danger[disabled]:active, .action.action-danger[disabled]:active:focus, .action.action-danger[disabled]:active:hover, .action.action-danger[disabled]:hover:focus {
+  background: white;
+  color: #ad0000;
+  text-decoration: none;
+}
+/* line 446, _variables.scss */
+.action.action-danger:hover, .action.action-danger:focus, .action.action-danger:active, .action.action-danger:active:focus, .action.action-danger:active:hover, .action.action-danger:hover:focus {
+  background: white;
+  color: #ad0000;
+  text-decoration: none;
+}
+/* line 538, main.scss */
+.action.action-warning {
+  background: #333333;
+  color: white;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+/* line 441, _variables.scss */
+.action.action-warning[disabled]:hover, .action.action-warning[disabled]:focus, .action.action-warning[disabled]:active, .action.action-warning[disabled]:active:focus, .action.action-warning[disabled]:active:hover, .action.action-warning[disabled]:hover:focus {
+  background: white;
+  color: #333333;
+  text-decoration: none;
+}
+/* line 446, _variables.scss */
+.action.action-warning:hover, .action.action-warning:focus, .action.action-warning:active, .action.action-warning:active:focus, .action.action-warning:active:hover, .action.action-warning:hover:focus {
+  background: white;
+  color: #333333;
+  text-decoration: none;
+}
+/* line 549, main.scss */
+.action.action-info {
+  background: #347abb;
+  color: white;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+/* line 441, _variables.scss */
+.action.action-info[disabled]:hover, .action.action-info[disabled]:focus, .action.action-info[disabled]:active, .action.action-info[disabled]:active:focus, .action.action-info[disabled]:active:hover, .action.action-info[disabled]:hover:focus {
+  background: white;
+  color: #347abb;
+  text-decoration: none;
+}
+/* line 446, _variables.scss */
+.action.action-info:hover, .action.action-info:focus, .action.action-info:active, .action.action-info:active:focus, .action.action-info:active:hover, .action.action-info:hover:focus {
+  background: white;
+  color: #347abb;
+  text-decoration: none;
+}
+
+/* #endregion */
+/* #region static page */
+/* line 565, main.scss */
+.static-content {
+  width: 100%;
+  height: 100%;
+  background: url("../img/img_1_n.jpg") 50% 0/cover no-repeat white;
+}
+
+/* #endregion */
+/* line 573, main.scss */
+.users .user {
+  cursor: pointer;
+}
+
+/* line 579, main.scss */
+.chat-messages-new textarea {
+  width: 100%;
+  height: 100%;
+}
+/* line 583, main.scss */
+.chat-messages-new .btn {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+}
+
+/* line 589, main.scss */
+.chat-content {
+  border-top: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+  width: 100%;
+  height: 500px;
+}
+/* line 593, main.scss */
+.chat-content .row {
+  margin: 0;
+}
+/* line 596, main.scss */
+.chat-content .row .col-xs-12 {
+  padding: 0;
+}
+/* line 601, main.scss */
+.chat-content h3 {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+/* line 605, main.scss */
+.chat-content .users-list {
+  width: 100%;
+  height: 500px;
+  border-right: 1px solid #e6e6e6;
+}
+/* line 609, main.scss */
+.chat-content .users-list .users-list-heading {
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  background: #2296f3;
+  color: white;
+}
+/* line 615, main.scss */
+.chat-content .users-list .users-list-body {
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+/* line 618, main.scss */
+.chat-content .users-list .users-list-body .fa-lock {
+  cursor: pointer;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+/* line 441, _variables.scss */
+.chat-content .users-list .users-list-body .fa-lock[disabled]:hover, .chat-content .users-list .users-list-body .fa-lock[disabled]:focus, .chat-content .users-list .users-list-body .fa-lock[disabled]:active, .chat-content .users-list .users-list-body .fa-lock[disabled]:active:focus, .chat-content .users-list .users-list-body .fa-lock[disabled]:active:hover, .chat-content .users-list .users-list-body .fa-lock[disabled]:hover:focus {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+/* line 446, _variables.scss */
+.chat-content .users-list .users-list-body .fa-lock:hover, .chat-content .users-list .users-list-body .fa-lock:focus, .chat-content .users-list .users-list-body .fa-lock:active, .chat-content .users-list .users-list-body .fa-lock:active:focus, .chat-content .users-list .users-list-body .fa-lock:active:hover, .chat-content .users-list .users-list-body .fa-lock:hover:focus {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+/* line 628, main.scss */
+.chat-content .chat-window {
+  width: 100%;
+  height: 500px;
+}
+/* line 631, main.scss */
+.chat-content .chat-window .chat-window-heading {
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  background: #2296f3;
+  color: white;
+}
+/* line 637, main.scss */
+.chat-content .chat-window .chat-window-body {
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+
+/* line 643, main.scss */
+.chat-messages-content {
+  position: relative;
+  width: 100%;
+  height: 440px;
+}
+/* line 647, main.scss */
+.chat-messages-content .drop-zone {
+  position: absolute;
+  width: 100%;
+  height: 440px;
+}
+/* line 652, main.scss */
+.chat-messages-content .chat-messages-new {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/* line 658, main.scss */
+.chat-messages-content .chat-messages-new .fa {
+  cursor: pointer;
+  color: #666666;
+  margin-right: 15px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+/* line 664, main.scss */
+.chat-messages-content .chat-messages-new .fa.fa-file {
+  right: 45px;
+}
+/* line 749, _variables.scss */
+.chat-messages-content .chat-messages-new .fa.fa-file input[type='file'] {
+  position: fixed;
+  top: -1000px;
+}
+/* line 669, main.scss */
+.chat-messages-content .chat-messages-new .fa.fa-video-camera {
+  right: 90px;
+}
+/* line 675, main.scss */
+.chat-messages-content .chat-messages {
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  height: 295px;
+  overflow-y: scroll;
+}
+/* line 396, _variables.scss */
+.chat-messages-content .chat-messages .chat-message:before, .chat-messages-content .chat-messages .chat-message:after {
+  content: " ";
+  display: table;
+}
+/* line 401, _variables.scss */
+.chat-messages-content .chat-messages .chat-message:after {
+  clear: both;
+}
+/* line 683, main.scss */
+.chat-messages-content .chat-messages .chat-message .chat-message-item {
+  max-width: 250px;
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  margin-bottom: 10px;
+  background: #2296f3;
+  color: white;
+  float: right;
+}
+/* line 692, main.scss */
+.chat-messages-content .chat-messages .chat-message .chat-message-item p {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+/* line 696, main.scss */
+.chat-messages-content .chat-messages .chat-message .chat-message-item.other-person {
+  background: #ff9800;
+  float: left;
+}
+
+/* line 706, main.scss */
+.modal-chat-window .modal-dialog {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* line 711, main.scss */
+.modal-chat-window .modal-dialog .modal-content {
+  width: 100%;
+  height: 100%;
+  background: #2f343b;
+}
+/* line 715, main.scss */
+.modal-chat-window .modal-dialog .modal-content .modal-body {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+/* line 719, main.scss */
+.modal-chat-window .modal-dialog .modal-content .modal-body h3 {
+  color: white;
+}
+/* line 723, main.scss */
+.modal-chat-window .modal-dialog .modal-content .modal-body .video-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+/* line 727, main.scss */
+.modal-chat-window .modal-dialog .modal-content .modal-body .video-container #localVideo {
+  position: absolute;
+  bottom: 150px;
+  left: 15px;
+  width: 200px;
+}
+/* line 732, main.scss */
+.modal-chat-window .modal-dialog .modal-content .modal-body .video-container #remoteVideo {
+  width: 60%;
+  height: 500px;
+}
+/* line 737, main.scss */
+.modal-chat-window .modal-dialog .modal-content .modal-body .btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}

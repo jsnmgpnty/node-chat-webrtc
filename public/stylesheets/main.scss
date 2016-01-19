@@ -1,0 +1,745 @@
+@import '_variables.scss';
+
+body {
+    background: $main-background-color;
+
+    &.font-en {
+        font-family: $fonts;
+    }
+}
+
+.font-en {
+    font-family: $fonts !important;
+}
+
+.font-cs {
+    font-family: $fonts-cs !important;
+}
+
+.font-black {
+    color: $main-stroke-color;
+}
+
+.font-white {
+    color: $info-color;
+}
+
+.font-primary {
+    color: $primary-color;
+}
+
+.black-shadow {
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 0 1px 0 #000, 1px 0 0 #000, 0 -1px 0 #000, -1px 0 0 #000, 2px -1px 0 #000;
+}
+
+.white-shadow {
+    text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff, 2px -1px 0 #fff;
+}
+
+.top-pad {
+    @include padding($default-padding * 2, null, $default-padding * 2, null);
+}
+
+.title {
+    font-weight: bold;
+
+    span {
+        @include background($secondary-color);
+        @include padding($default-padding / 3);
+        @include border-radius($default-padding / 5, false, true);
+        color: $light-font-color;
+    }
+}
+
+.body-content {
+    @include margin(unquote($default-header-height + 'px'), null, null, null);
+
+    @include media (xs) {
+        @include margin(unquote($default-header-height-xs + 'px'), null, null, null);
+    }
+
+    @include media (sm) {
+        @include margin(unquote($default-header-height-xs + 'px'), null, null, null);
+    }
+}
+
+.ui-view, *[ui-view], ui-view {
+    @include size(100%);
+}
+
+.input-error-field {
+    @include margin(($default-margin / 3) * 2, null, 0, null);
+    font-size: 0.85em;
+}
+
+a {
+    color: $primary-color;
+    cursor: pointer;
+
+    @include active-element {
+        color: $primary-color;
+    }
+}
+
+select {
+    padding-left: 0 !important;
+    text-indent: ($default-padding / 3) * 8;
+}
+
+textarea {
+    resize: none;
+    min-height: unquote($min-textarea-size + 'px');
+}
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none !important;
+}
+
+.no-padding {
+    @include padding(0);
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    select {
+        padding-left: $default-padding * 3 !important;
+        text-indent: 0 !important;
+    }
+}
+
+@-moz-document url-prefix() {
+    select {
+        padding-left: 0 !important;
+        text-indent: ($default-padding / 3) * 4;
+    }
+}
+
+/* #region snap drawer menus */
+
+.snap-menu {
+    @include background($light-color);
+    @include position(initial, null);
+    @include size(100%);
+    -webkit-overflow-scrolling: touch;
+    overflow: auto;
+
+    &.snap-menu-left {
+        -moz-box-shadow: inset -4px 0 16px -4px rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: inset -4px 0 16px -4px rgba(0, 0, 0, 0.5);
+        box-shadow: inset -4px 0 16px -4px rgba(0, 0, 0, 0.5);
+    }
+
+    &.snap-menu-right {
+        -moz-box-shadow: inset 4px 0 16px -4px rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: inset 4px 0 16px -4px rgba(0, 0, 0, 0.5);
+        box-shadow: inset 4px 0 16px -4px rgba(0, 0, 0, 0.5);
+    }
+
+    ul {
+        @include clean-list;
+
+        li {
+            a, > div {
+                $y-padding: unquote(($base-padding / 5) * 4 + 'px');
+                @include padding($y-padding, $default-padding, null, $default-padding);
+                @include borders(1px, solid, $light-border-color, false, false, true);
+                @include size(auto, unquote((($base-padding / 3) * 10) + 'px'));
+                line-height: 1.7;
+                color: $dark-font-color;
+                font-size: 1.2em;
+                -moz-box-shadow: none;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                display: block;
+                font-weight: 400;
+                text-transform: uppercase;
+
+                i {
+                    @include margin(null, unquote(($base-margin / 3) * 2 + 'px'));
+                    font-size: 1.2em;
+                }
+
+                @mixin nav-header-text {
+                    @include padding(unquote((($base-padding / 3) * 5) + 'px'), null, null, null);
+                    font-weight: bold;
+                    font-size: 1em;
+                    cursor: pointer;
+                }
+
+                &.nav-slider-header {
+                    @include nav-header-text;
+                }
+
+                &.nav-slider-active {
+                    color: $primary-color;
+                    background-color: darken($light-color, 10%);
+                    @include borders(4px, solid, $primary-color, false, false, false, true);
+                    -moz-box-shadow: inset -7px 2px 6px -4px rgba(0, 0, 0, 0.4);
+                    -webkit-box-shadow: inset -7px 2px 6px -4px rgba(0, 0, 0, 0.4);
+                    box-shadow: inset -7px 2px 6px -4px rgba(0, 0, 0, 0.4);
+                    border-bottom: 1px solid darken($light-border-color, $border-darken-value);
+                }
+
+                &.nav-slider-detail {
+                    @include size(auto);
+                    @include padding(0);
+
+                    div {
+                        a {
+                            @include size(auto, unquote((($base-padding / 3) * 9) + 'px'));
+                            @include padding(null, null, null, $default-padding * 2);
+                            font-size: 1em;
+                            cursor: pointer;
+                            line-height: 1;
+                        }
+                    }
+                }
+            }
+
+            &.block {
+                a, > div {
+                    @include size(auto);
+                }
+            }
+        }
+    }
+}
+
+/* #endregion */
+
+/* #region form-group-set */
+
+.btn-select {
+    @include margin(null, null, $default-margin / 3);
+    @include size(100%, auto);
+    display: block;
+
+    .btn {
+        $top-bottom-padding: ($default-padding / 5) * 2;
+        $right-padding: ($default-padding / 5) * 4;
+        $left-padding: $default-padding * 3;
+        @include size(100%, auto);
+        @include padding($top-bottom-padding, $right-padding, $top-bottom-padding, $left-padding);
+        color: $dark-font-color;
+        background-color: darken($light-color, $hover-darken-value * 1.5);
+        text-align: left;
+
+        &:disabled {
+            background-color: darken($light-color, $hover-darken-value * 1.5);
+        }
+    }
+}
+
+.form-group-set {
+    @include margin(null, null, unquote(($base-margin) + 'px'));
+
+    .form-group-set-header {
+        text-transform: uppercase;
+        font-size: 0.85em;
+    }
+
+    .btn-group {
+        @include size(100%, auto);
+    }
+
+    .dropdown-menu {
+        @include background($main-background-color);
+        width: 100%;
+
+        > li {
+            &.active {
+                a {
+                    background-color: $primary-color;
+                    color: $light-font-color;
+                }
+            }
+
+            > a {
+                color: $dark-font-color;
+
+                &:hover, &:active, &:focus {
+                    background-color: $primary-color;
+                    color: $light-font-color;
+                    cursor: pointer !important;
+                }
+            }
+        }
+    }
+}
+
+.submit-button {
+    $top-margin: unquote(($base-margin * 2) + 'px');
+    $bottom-margin: unquote(($base-margin * 3) + 'px');
+    @include margin($top-margin, null, $bottom-margin, null);
+    text-align: center;
+
+    .btn {
+        font-weight: bold;
+        text-transform: uppercase;
+        $xPadding: (($default-padding / 5) * 8);
+        $yPadding: (($default-padding / 5) * 3);
+        @include padding($yPadding, $xPadding, $yPadding, $xPadding);
+    }
+}
+
+/* #endregion */
+
+/* #region card class */
+
+.card {
+    @include box-shadow(false);
+    @include border-radius(null, false);
+    vertical-align: top;
+    font-size: 1em;
+    color: darken($dark-border-color, 20%);
+    margin-bottom: $default-margin;
+
+    .header {
+        @include padding($default-padding);
+        @include borders(1px, solid, $light-border-color, false, false, true, false);
+    }
+
+    .content {
+        @include padding($default-padding);
+        @include borders(1px, solid, $light-border-color, false, false, true, false);
+
+        &:last-child {
+            @include borders(0, empty, empty, false, false, true);
+        }
+    }
+
+    .captions {
+        @include padding($default-padding);
+
+        p {
+            @include padding(0);
+            @include margin(0);
+
+            &:first-of-type {
+                $header-margin: unquote(($base-margin / 3) + 'px');
+                font-weight: bold;
+                @include margin(0, 0, $header-margin);
+            }
+        }
+    }
+}
+
+.card-iconify {
+    @extend .card;
+
+    .header {
+        @include margin(null, null, $default-margin * 2);
+    }
+
+    .content {
+        @include position(relative, null);
+
+        .card-icon {
+            @include border-radius(round, true, true);
+            @include position(absolute, -4.1em, null, null, 50%);
+            @include size(4em);
+            display: block;
+            text-align: center;
+            margin-left: -2em;
+            line-height: 4.8em;
+        }
+    }
+}
+
+.card-inv {
+    @extend .card;
+    border: none;
+    background: transparent;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+
+    .header {
+        @include borders(1px, solid, $light-border-color, false, false, true, false);
+    }
+}
+
+.card-primary {
+    @extend .card;
+    color: $dark-font-color;
+    background: $light-color;
+    border-top: $default-margin / 3 solid $primary-stroke-color;
+
+    .header {
+        background: $primary-color;
+        color: $light-font-color;
+    }
+
+    .content {
+        .card-icon {
+            color: $light-font-color;
+            background: $primary-color;
+        }
+    }
+}
+
+.card-success {
+    @extend .card;
+    color: $dark-font-color;
+    background: $light-color;
+    border-top: $default-margin / 3 solid $success-stroke-color;
+
+    .header {
+        background: $success-color;
+        color: $light-font-color;
+    }
+
+    .content {
+        .card-icon {
+            color: $light-font-color;
+            background: $success-color;
+        }
+    }
+}
+
+.card-warning {
+    @extend .card;
+    color: $dark-font-color;
+    background: $light-color;
+    border-top: $default-margin / 3 solid $warning-color;
+
+    .header {
+        background: $warning-color;
+        color: $light-font-color;
+    }
+
+    .content {
+        .card-icon {
+            color: $light-font-color;
+            background: $warning-color;
+        }
+    }
+}
+
+.card-danger {
+    @extend .card;
+    color: $dark-font-color;
+    background: $light-color;
+    border-top: $default-margin / 3 solid $danger-stroke-color;
+
+    .header {
+        background: $danger-color;
+        color: $light-font-color;
+    }
+
+    .content {
+        .card-icon {
+            color: $light-font-color;
+            background: $danger-color;
+        }
+    }
+}
+
+.card-info {
+    @extend .card;
+    color: $dark-font-color;
+    background: $light-color;
+    border-top: $default-margin / 3 solid $info-stroke-color;
+
+    .header {
+        background: $info-color;
+        color: $light-font-color;
+    }
+
+    .content {
+        .card-icon {
+            color: $light-font-color;
+            background: $info-color;
+        }
+    }
+}
+
+.card-default {
+    @extend .card;
+    @include borders(1px, solid, $light-border-color, true);
+    color: $dark-font-color;
+    background: $default-color;
+
+    .card-icon {
+        color: $light-font-color;
+        background: $primary-color;
+    }
+
+    &.darken {
+        background: $default-color-darken;
+    }
+}
+
+/* #endregion */
+
+/* #region action button */
+
+.action {
+    font-weight: normal;
+    text-align: left;
+    color: $light-font-color;
+    @include borders(1px, solid, $light-color, true);
+    @include border-radius($default-border-radius, false, true);
+    @include padding($default-padding);
+    cursor: pointer;
+    white-space: nowrap;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+
+    i {
+        margin-right: $default-margin / 3;
+    }
+
+    &.action-success {
+        background: $success-stroke-color;
+        color: $light-font-color;
+
+        @include active-element {
+            background: $light-color;
+            color: $success-stroke-color;
+            text-decoration: none;
+        }
+    }
+
+    &.action-primary {
+        background: $primary-color;
+        color: $light-font-color;
+
+        @include active-element {
+            background: $light-color;
+            color: $primary-color;
+            text-decoration: none;
+        }
+    }
+
+    &.action-secondary {
+        background: $secondary-color;
+        color: $light-font-color;
+
+        @include active-element {
+            background: $light-color;
+            color: $secondary-color;
+            text-decoration: none;
+        }
+    }
+
+    &.action-danger {
+        background: $danger-stroke-color;
+        color: $light-font-color;
+
+        @include active-element {
+            background: $light-color;
+            color: $danger-stroke-color;
+            text-decoration: none;
+        }
+    }
+
+    &.action-warning {
+        background: $warning-stroke-color;
+        color: $light-font-color;
+
+        @include active-element {
+            background: $light-color;
+            color: $warning-stroke-color;
+            text-decoration: none;
+        }
+    }
+
+    &.action-info {
+        background: $info-stroke-color;
+        color: $light-font-color;
+
+        @include active-element {
+            background: $light-color;
+            color: $info-stroke-color;
+            text-decoration: none;
+        }
+    }
+}
+
+/* #endregion */
+
+/* #region static page */
+
+.static-content {
+    @include size(100%);
+    background: url("../img/img_1_n.jpg") 50% 0 / cover no-repeat rgb(255, 255, 255);
+}
+
+/* #endregion */
+
+.users {
+    .user {
+        cursor: pointer;
+    }
+}
+
+.chat-messages-new {
+    textarea {
+        @include size(100%);
+    }
+    
+    .btn {
+        @include size(100%);
+        min-width: 0;
+    }
+}
+
+.chat-content {
+    @include borders(1px, solid, $light-border-color, true);
+    @include size(100%, $chat-content-height);
+    
+    .row {
+        margin: 0;
+        
+        .col-xs-12 {
+            padding: 0;
+        }
+    }
+    
+    h3 {
+        @include margin(0);
+    }
+    
+    .users-list {
+        @include size(100%, $chat-content-height);
+        border-right: 1px solid $light-border-color;
+        
+        .users-list-heading {
+            @include padding($default-padding);
+            background: $primary-color;
+            color: $light-font-color;
+        }
+        
+        .users-list-body {
+            @include padding($default-padding);
+            
+            .fa-lock {
+                cursor: pointer;
+                
+                @include active-element {
+                    @include opacity(0.5);
+                }
+            }
+        }
+    }
+    
+    .chat-window {
+        @include size(100%, $chat-content-height);
+        
+        .chat-window-heading {
+            @include padding($default-padding);
+            background: $primary-color;
+            color: $light-font-color;
+        }
+        
+        .chat-window-body {
+            @include padding($default-padding);
+        }
+    }
+}
+
+.chat-messages-content {
+    @include position(relative, null);
+    @include size(100%, $chat-messages-height);
+    
+    .drop-zone {
+        @include position(absolute, null);
+        @include size(100%, $chat-messages-height);
+    }
+    
+    .chat-messages-new {
+        @include position(relative, null);
+        @include size(100%);
+        
+        .btn-upload {}
+        
+        .fa {
+            cursor: pointer;
+            color: lighten($dark-font-color, 20%);
+            @include margin(null, $default-margin);
+            @include position(absolute, $default-margin / 3, $default-margin / 3, null, null);
+            
+            &.fa-file {
+                right: $default-margin * 3;
+                @include pretty-input-file;
+            }
+            
+            &.fa-video-camera {
+                right: $default-margin * 6;
+            }
+        }
+    }
+    
+    .chat-messages {
+        @include padding($default-padding);
+        height: 295px;
+        overflow-y: scroll;
+        
+        .chat-message {
+            @include clear-fix;
+            
+            .chat-message-item {
+                max-width: $chat-message-width;
+                @include padding($default-padding / 3);
+                @include margin(null, null, ($default-margin / 3 * 2));
+                
+                background: $primary-color;
+                color: $light-font-color;
+                float: right;
+                
+                p {
+                    @include margin(0);
+                }
+                
+                &.other-person {
+                    background: $secondary-color;
+                    float: left;
+                }
+            }
+        }
+    }
+}
+
+.modal-chat-window {
+    .modal-dialog {
+        @include margin(0);
+        @include position(fixed, 0);
+        @include size(100%);
+        
+        .modal-content {
+            @include size(100%);
+            background: $dark-color;
+            
+            .modal-body {
+                @include size(100%);
+                @include center;
+                
+                h3 {
+                    color: $light-font-color;
+                }
+                
+                .video-container {
+                    @include size(100%);
+                    @include position(relative, null);
+                    
+                    #localVideo {
+                        @include position(absolute, null, null, $default-margin * 10, $default-margin);
+                        @include size($chat-local-video-width, null);
+                    }
+                    
+                    #remoteVideo {
+                        @include size($chat-remote-video-width, $chat-remote-video-height);
+                    }
+                }
+                
+                .btn {
+                    @include position(absolute, null, 0, 0, 0);
+                    @include size(100%, $chat-close-video-btn-size);
+                    @include padding($default-padding / 3 * 4);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,753 @@
+// main font
+$fonts: 'HelveticaNeue', 'Arial', 'Helvetica';
+$fonts-cs: 'Open Sans', 'Arial', 'Helvetica';
+$base-font-size: 14px;
+
+// logo
+$logo-image: url("../../images/brand.png");
+$logo-image-xs: url("../../images/brand-xs.png");
+$logo-width: 105px;
+$logo-height: 80px;
+$logo-width-xs: 120px;
+$logo-height-xs: 75px;
+$base-icon-size: 30px;
+$logo-left: 5px;
+
+// header and footer
+$default-header-height: 90;
+$default-header-height-xs: 50;
+$default-footer-height: 65;
+$header-brand-line-height: 20;
+$navbar-wrapper-width: 550px;
+
+// image heights
+$base-splash-image-height: 420px;
+$base-splash-image-height-sm: 340px;
+$base-splash-image-height-xs: 250px;
+$footer-icons-size: 30px;
+
+// borders
+$base-border-radius: 4;
+$default-border-radius: 4px;
+$can-round-element: true;
+
+// loader element
+$loader-element-size: 150px;
+$loader-icon-image: url("../../images/ajax-loader.gif");
+
+// padding
+$base-padding: 15;
+$default-padding: 15px;
+
+// margin
+$base-margin: 15;
+$default-margin: 15px;
+
+// chat 
+$chat-message-width: 250px;
+$chat-content-height: 500px;
+$chat-messages-height: 440px;
+$chat-local-video-width: 200px;
+$chat-remote-video-width: 60%;
+$chat-remote-video-height: 500px;
+$chat-close-video-btn-size: 100px;
+
+// input widths
+$datepicker-max-width: 300px;
+$datepicker-select-width: 150px;
+$min-select-width: 200px;
+$max-select-width: 300px;
+$min-input-width: 200px;
+$max-input-width: 300px;
+$min-popover-width: 276px;
+$input-group-addon-width: 40px;
+$account-navigation-width: 40px;
+$element-block-width: 280px;
+$min-textarea-size: 75;
+$promo-games-height: 160;
+$min-button-width: 100px;
+$min-form-group-set-height: 300px;
+$tab-border-bottom-height: 4px;
+
+// darkening values
+$hover-darken-value: 5%;
+$border-darken-value: 5%;
+
+// devices width
+$lg-screen-width: 1200px;
+$md-screen-width: 992px;
+$sm-screen-width: 768px;
+$xs-screen-width: 320px;
+
+$snap-drawer-width: 300;
+
+// box shadow rules
+$box-shadow-x: 0;
+$box-shadow-x-inset: 0;
+$box-shadow-y: 2px;
+$box-shadow-y-inset: 0;
+$box-shadow-blur: 4px;
+$box-shadow-blur-inset: 10px;
+$box-shadow-spread: 0;
+$box-shadow-spread-inset: 0;
+$box-shadow-color: rgba(0, 0, 0, 0.1);
+$box-shadow-color-inset: rgba(0, 0, 0, 0.5);
+$box-shadow-color-default: #ccc;
+$box-shadow-color-default-inset: #aaa;
+
+// base colors
+$dark-color: #2F343B;
+$light-color: #fff;
+$base-grayscale-color: #999;
+$light-border-color: lighten($base-grayscale-color, 30%);
+$dark-border-color: darken($base-grayscale-color, 20%);
+$block-color: #fff;
+
+$main-background-color: #fff;
+$main-background: #fff;
+
+$main-color: #333;
+$main-stroke-color: #232323;
+$primary-color: #2296F3;
+$primary-stroke-color: #1f85d8;
+$secondary-color: #FF9800;
+$secondary-stroke-color: #e98c04;
+
+$success-color: #cff8d0;
+$success-stroke-color: #009103;
+$danger-color: #ff6666;
+$danger-stroke-color: #ad0000;
+$warning-color: #ffcc00;
+$warning-stroke-color: #333333;
+$info-color: #8ac5fc;
+$info-stroke-color: #347abb;
+$default-color: #fff;
+$default-stroke-color: darken($default-color, 10%);
+$default-color-darken: darken($default-color, 10%);
+
+// font colors
+$light-font-color: #fff;
+$dark-font-color: #333333;
+
+// mixin size: width; height;
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+// mixin padding: top, right, bottom, left;
+@mixin position($value, $top, $right: $top, $bottom: $top, $left: $top) {
+    @if ($value != null) {
+        position: $value;
+    }
+
+    @if ($top != null) {
+        top: $top;
+    }
+
+    @if ($right != null) {
+        right: $right;
+    }
+
+    @if ($bottom != null) {
+        bottom: $bottom;
+    }
+
+    @if ($left != null) {
+        left: $left;
+    }
+}
+
+// mixin padding: top, right, bottom, left;
+@mixin padding($top, $right: $top, $bottom: $top, $left: $top) {
+    @if ($top != null) {
+        padding-top: $top;
+    }
+
+    @if ($right != null) {
+        padding-right: $right;
+    }
+
+    @if ($bottom != null) {
+        padding-bottom: $bottom;
+    }
+
+    @if ($left != null) {
+        padding-left: $left;
+    }
+}
+
+// mixin margin: top, right, bottom, left;
+@mixin margin($top, $right: $top, $bottom: $top, $left: $top) {
+    @if ($top != null) {
+        margin-top: $top;
+    }
+
+    @if ($right != null) {
+        margin-right: $right;
+    }
+
+    @if ($bottom != null) {
+        margin-bottom: $bottom;
+    }
+
+    @if ($left != null) {
+        margin-left: $left;
+    }
+}
+
+// mixin opacity: value;
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// mixin box-shadow: inset
+@mixin box-shadow($inset: false) {
+    @if($inset != null and $inset == true) {
+        box-shadow: inset $box-shadow-x-inset $box-shadow-y-inset $box-shadow-blur-inset $box-shadow-spread-inset $box-shadow-color-default-inset;
+        box-shadow: inset $box-shadow-x-inset $box-shadow-y-inset $box-shadow-blur-inset $box-shadow-spread-inset $box-shadow-color-inset;
+    }
+    @else {
+        box-shadow: $box-shadow-x $box-shadow-y $box-shadow-blur $box-shadow-spread $box-shadow-color-default;
+        box-shadow: $box-shadow-x $box-shadow-y $box-shadow-blur $box-shadow-spread $box-shadow-color;
+    }
+}
+
+// mixin clean ul
+@mixin clean-list {
+    list-style-type: none;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+// mixin ellipsis text
+@mixin ellipsis-text {
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+// mixin mediaqueries: breakpoint value;
+@mixin media($point) {
+    @if $point == lg {
+        @media screen and (min-width: 1200px) {
+            @content;
+        }
+    }
+    @else if $point == md {
+        @media screen and (min-width: 992px) and (max-width: 1199px) {
+            @content;
+        }
+    }
+    @else if $point == sm {
+        @media screen and (min-width: 768px) and (max-width: 992px) {
+            @content;
+        }
+    }
+    @else if $point == xs {
+        @media screen and (max-width: 767px) {
+            @content;
+        }
+    }
+}
+
+// mixin center
+@mixin center {
+    margin: 0 auto;
+    text-align: center;
+}
+
+// mixin background
+@mixin background($args) {
+    background: $args;
+}
+
+// mixin transition: args
+@mixin transition($args) {
+    -moz-transition: $args !important;
+    -o-transition: $args !important;
+    -webkit-transition: $args !important;
+    transition: $args !important;
+}
+
+// mixin hidden file input
+@mixin hidden-file-input {
+    label {
+        @include margin(null, 0);
+        cursor: pointer;
+
+        > input[type='file'] {
+            position: fixed;
+            top: -1000px;
+        }
+    }
+}
+
+// mixin borders: size, type, color, top, left, bottom, right;
+@mixin borders ($size, $type, $color, $top, $right: $top, $bottom: $top, $left: $top) {
+    @if ($size == null) {
+        $size: 1px;
+    }
+
+    @if ($type == null) {
+        $type: solid;
+    }
+
+    @if ($color == null) {
+        $color: $light-border-color;
+    }
+
+    @if ($size == empty or $size == 0) {
+        $border-value: 0;
+    }
+
+    $border-value: $size;
+    $arr-params: ($type, $color);
+
+    @each $param in $arr-params {
+        @if ($param != empty) {
+            $border-value: $border-value $param;
+        }
+    }
+
+    @if ($top != null and $top) {
+        border-top: $border-value;
+    }
+
+    @if ($right != null and $right) {
+        border-right: $border-value;
+    }
+
+    @if ($bottom != null and $bottom) {
+        border-bottom: $border-value;
+    }
+
+    @if ($left != null and $left) {
+        border-left: $border-value;
+    }
+}
+
+// mixin border-radius: type
+@mixin border-radius ($radius-size, $important, $top-left: true, $top-right: $top-left, $bottom-right: $top-left, $bottom-left: $top-left) {
+    $border-radius-value: $base-border-radius;
+
+    @if ($radius-size == null or $radius-size == xs) {
+        $border-radius-value: $default-border-radius;
+    }
+    @elseif ($radius-size == sm) {
+        $border-radius-value: unquote(($base-border-radius * 2) + 'px');
+    }
+    @elseif ($radius-size == md) {
+        $border-radius-value: unquote(($base-border-radius * 3) + 'px');
+    }
+    @elseif ($radius-size == lg) {
+        $border-radius-value: unquote(($base-border-radius * 4) + 'px');
+    }
+    @elseif ($radius-size == round and $can-round-element == true) {
+        $border-radius-value: 100%;
+    }
+    @else {
+        $border-radius-value: $default-border-radius;
+    }
+
+    @if ($important != null and $important == false) {
+        @if ($top-left != null and $top-left) {
+            border-top-left-radius: $border-radius-value;
+        }
+
+        @if ($top-right != null and $top-right) {
+            border-top-right-radius: $border-radius-value;
+        }
+
+        @if ($bottom-left != null and $bottom-left) {
+            border-bottom-left-radius: $border-radius-value;
+        }
+
+        @if ($bottom-right != null and $bottom-right) {
+            border-bottom-right-radius: $border-radius-value;
+        }
+    }
+    @elseif ($important == null or $important == true) {
+        @if ($top-left != null and $top-left) {
+            border-top-left-radius: $border-radius-value !important;
+        }
+
+        @if ($top-right != null and $top-right) {
+            border-top-right-radius: $border-radius-value !important;
+        }
+
+        @if ($bottom-left != null and $bottom-left) {
+            border-bottom-left-radius: $border-radius-value !important;
+        }
+
+        @if ($bottom-right != null and $bottom-right) {
+            border-bottom-right-radius: $border-radius-value !important;
+        }
+    }
+}
+
+// mixin clear fix floats
+@mixin clear-fix {
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+// mixin dropdown
+@mixin dropdown-menu {
+    .dropdown {
+        &.open {
+            li {
+                a {
+                    background-color: transparent;
+                    color: $dark-font-color;
+                    border: none;
+                }
+            }
+        }
+    }
+
+    .dropdown-menu {
+        background-color: $light-color;
+        color: $dark-font-color;
+
+        li {
+            a {
+                background-color: transparent;
+                color: $dark-font-color;
+            }
+        }
+    }
+}
+
+// mixin for active element
+@mixin active-element {
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+
+    &[disabled] {
+        &:hover, &:focus, &:active, &:active:focus, &:active:hover, &:hover:focus {
+            @content;
+        }
+    }
+
+    &:hover, &:focus, &:active, &:active:focus, &:active:hover, &:hover:focus {
+        @content;
+    }
+}
+
+// mixin loader element
+@mixin loader-element {
+    @include size($loader-element-size, $loader-element-size / 3);
+    @include center;
+    background: $loader-icon-image center no-repeat;
+    background-size: contain;
+}
+
+// mixin vertical align
+@mixin vertical-align ($alignment: 50%) {
+    position: relative;
+    top: $alignment;
+    -moz-transform: translateY(-$alignment);
+    -ms-transform: translateY(-$alignment);
+    -o-transform: translateY(-$alignment);
+    -webkit-transform: translateY(-$alignment);
+    transform: translateY(-$alignment);
+}
+
+// mixin vertical and horizontal align
+@mixin xy-align {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+// mixin opaque white background
+@mixin opaque-light-bg {
+    background: $light-color;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+// mixin opaque white background
+@mixin opaque-dark-bg {
+    background: $dark-color;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+// mixin background-opacity
+@mixin background-opacity($color, $opacity: 0.3) {
+    background: $color;
+    background: rgba($color, $opacity);
+}
+
+// mixin radial gradient background
+@mixin background-gradient-radial($start-color, $end-color) {
+    background: $start-color;
+    background: -moz-radial-gradient(center, ellipse cover, $start-color 33%, $end-color 100%);
+    background: -webkit-gradient(radial, center center, 0, center center, 100%, color-stop(33%, $start-color), color-stop(100%,$end-color));
+    background: -webkit-radial-gradient(center, ellipse cover, $start-color 33%,$end-color 100%);
+    background: -o-radial-gradient(center, ellipse cover, $start-color 33%,$end-color 100%);
+    background: -ms-radial-gradient(center, ellipse cover, $start-color 33%,$end-color 100%);
+    background: radial-gradient(ellipse at center, $start-color 33%,$end-color 100%);
+    filter: unquote("progid:DXImageTransform.Microsoft.gradient( startColorstr='#" + $end-color + "', endColorstr='#" + $end-color + "',GradientType=1 )");
+}
+
+// mixin split x gradient background
+@mixin background-gradient-horizontal($color) {
+    $first: lighten($color, 8%);
+    $second: lighten($color, 12%);
+    $third: lighten($color, 16%);
+
+    background: $color;
+    background: -moz-linear-gradient(top, $third 0, $second 50%, $first 51%, $color 100%);
+    background: -webkit-linear-gradient(top, $third 0,$second 50%, $first 51%, $color 100%);
+    background: linear-gradient(to bottom, $third 0, $second 50%, $first 51%, $color 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$third}', endColorstr='#{$color}',GradientType=0 );
+}
+
+// mixin for list item in navbar
+@mixin nav-list-item($main-color, $font-color) {
+    a {
+        background-color: transparent;
+        color: $font-color;
+
+        i {
+            @include margin(null, ($default-margin / 5) * 2);
+        }
+
+        &:hover, &:active, &:focus {
+            background-color: $main-color;
+            color: $font-color;
+        }
+    }
+}
+
+// mixin navbar-items
+@mixin navbar-items($main-color, $border-color, $font-color) {
+    background-color: $main-color;
+    border-color: darken($main-color, $border-darken-value);
+
+    @include dropdown-menu;
+
+    .navbar {
+        border-radius: 0;
+    }
+
+    .navbar-nav {
+        &.navbar-right {
+            @include position(absolute, 0, 0, null, null);
+            @include margin(0);
+
+            > li {
+                > a {
+                    border: none;
+
+                    &.signup {
+                        @include padding(ceil($default-padding / 2));
+                    }
+
+                    &.login {
+                        @include padding(ceil($default-padding / 2));
+                    }
+                }
+            }
+        }
+
+        > .open {
+            @include nav-list-item($main-color, $font-color);
+        }
+
+        > .active {
+            @include nav-list-item($main-color, $font-color);
+
+            a {
+                &:before {
+                    content: "";
+                    position: absolute;
+                    z-index: -1;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: darken($main-color, ($hover-darken-value * 2));
+                    height: $tab-border-bottom-height;
+                }
+            }
+        }
+
+        > li {
+            > a {
+                color: $font-color;
+                cursor: pointer;
+                text-transform: uppercase;
+                @include position(relative, null);
+
+                .ico {
+                    @include position(absolute, ($default-margin / 3) * 2, null, null, null);
+                    @include size($base-icon-size);
+                    background-size: cover !important;
+                }
+
+                .link-text {
+                    @include padding(null, null, null, ($default-padding / 3) * 8);
+                }
+
+                img {
+                    @include size(($default-margin / 3) * 6);
+                }
+
+                i {
+                    @include margin(null, ($default-margin / 5) * 2);
+                }
+
+                @include active-element {
+                    background: $secondary-color;
+                    @include border-radius($default-border-radius, false, true, true, false, false);
+                }
+            }
+        }
+    }
+
+    .navbar-toggle {
+        $toggle-size: unquote($default-header-height + 'px');
+        @include margin(0);
+        @include size($toggle-size);
+        border: none;
+
+        @include media(xs) {
+            @include size(unquote($default-header-height-xs + 'px'));
+        }
+
+        @include media(sm) {
+            @include size(unquote($default-header-height-xs + 'px'));
+            display: block;
+        }
+
+        @include media(md) {
+            @include size(unquote($default-header-height-xs + 'px'));
+            display: block;
+        }
+
+        @include active-element {
+            background-color: darken($main-color, $hover-darken-value);
+        }
+
+        .fa {
+            color: $font-color;
+        }
+
+        &.ng-hide {
+            display: none !important;
+        }
+    }
+
+    .navbar-header {
+        float: left;
+
+        @include media(sm) {
+            float: none;
+        }
+
+        @include media(xs) {
+            float: none;
+        }
+
+        .dropdown {
+            > a {
+                color: $font-color;
+            }
+        }
+    }
+
+    .navbar-brand {
+        color: $font-color;
+        height: unquote($default-header-height-xs + 'px');
+
+        @include media(xs) {
+            height: unquote($default-header-height-xs + 'px');
+        }
+
+        @include media(sm) {
+            height: unquote($default-header-height-xs + 'px');
+        }
+
+        @include media(md) {
+            height: unquote($default-header-height-xs + 'px');
+        }
+
+        @include active-element {
+            color: darken($font-color, $hover-darken-value);
+        }
+
+        > .logo {
+            @include position(relative, 0 null, null, 0);
+            @include size($logo-width, $logo-height);
+            background-image: $logo-image;
+            margin-left: 0;
+            display: block;
+
+            @include media(xs) {
+                background-image: $logo-image-xs;
+                @include position(absolute, 0, null, null, 50%);
+                @include size($logo-width-xs, $logo-height);
+                margin-left: -$logo-width-xs / 2;
+            }
+
+            @include media(sm) {
+                background-image: $logo-image-xs;
+                @include position(absolute, 0, null, null, 50%);
+                @include size($logo-width-xs, $logo-height);
+                margin-left: -$logo-width-xs / 2;
+            }
+
+            @include media(md) {
+                background-image: $logo-image-xs;
+                @include position(absolute, 0, null, null, 50%);
+                @include size($logo-width-xs, $logo-height);
+                margin-left: -$logo-width-xs / 2;
+            }
+        }
+    }
+
+    .navbar-collapse {
+        height: unquote($default-header-height + 'px') !important;
+        border-color: darken($main-color, $border-darken-value);
+        background: $main-color;
+        border-top: 0;
+
+        @include media(md) {
+            display: none !important;
+        }
+
+        @include media(sm) {
+            display: none !important;
+        }
+
+        @include media(xs) {
+            display: none !important;
+        }
+    }
+}
+
+@mixin pretty-input-file {
+    input[type='file'] {
+        position: fixed;
+        top: -1000px;
+    }
+}

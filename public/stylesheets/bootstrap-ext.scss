@@ -1,0 +1,619 @@
+@import '_variables.scss';
+
+/* #region dropdown-menu overrides */
+
+.typeahead {
+    max-width: $max-input-width;
+
+    @include media(xs) {
+        max-width: 100%;
+    }
+}
+
+.container-fluid {
+    $x-padding: unquote(($base-padding * 2) + 'px');
+    @include padding(null, $x-padding);
+}
+
+.dropdown-menu {
+    @include border-radius(null, true);
+    @include size(100%, auto);
+    background: $light-color;
+
+    > li {
+
+        &.active {
+            a {
+                background-color: $primary-color;
+            }
+        }
+
+        a {
+            color: $dark-font-color;
+
+            @include active-element {
+                text-decoration: underline;
+                background: $primary-color;
+                color: $light-font-color;
+            }
+        }
+    }
+}
+
+/* #endregion */
+
+/* #region datepicker overrides */
+
+.datepicker.dropdown-menu {
+    @include size(100%, auto);
+
+    button {
+        outline: none;
+        border: 1px solid transparent;
+
+        &.btn-default.btn-primary {
+            @include background($primary-color);
+            color: $light-font-color;
+        }
+
+        &.btn-default:hover {
+            @include background($light-border-color);
+            color: $dark-border-color;
+        }
+
+        &.btn-default.btn-today {
+            background: darken($light-border-color, $border-darken-value);
+        }
+    }
+
+    tbody {
+        height: 180px;
+    }
+
+    tbody button {
+        padding: 6px;
+    }
+
+    &.datepicker-mode-1, &.datepicker-mode-2 {
+        tbody button {
+            height: 65px;
+        }
+    }
+}
+
+/* #endregion */
+
+/* #region navbar overrides */
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    background: transparent;
+    color: $light-font-color;
+}
+
+.navbar {
+    @include position(fixed, 0);
+    height: unquote($default-header-height + 'px');
+    min-height: unquote($default-header-height + 'px');
+    -moz-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    z-index: 100;
+
+    @include media(xs) {
+        height: unquote($default-header-height-xs + 'px');
+        min-height: unquote($default-header-height-xs + 'px');
+    }
+
+    @include media(sm) {
+        height: unquote($default-header-height-xs + 'px');
+        min-height: unquote($default-header-height-xs + 'px');
+    }
+
+    .overlay-bg {
+        @include size(25%, unquote($default-header-height + 'px'));
+        @include position(absolute, 0, 0, null, null);
+        background: $primary-color;
+        border-bottom: 1px solid $primary-color;
+        z-index: 0;
+    }
+
+    .container {
+        @include position(relative, null);
+        z-index: 1;
+        height: 100%;
+
+        @include media (sm) {
+            @include margin(0);
+            @include size(100%, auto);
+        }
+
+        .navbar-wrapper {
+            @include media(lg) {
+                @include size($navbar-wrapper-width, auto);
+                margin-top: unquote($default-header-height-xs / 2 + 'px');
+                overflow: hidden;
+                border-bottom: 1px solid $secondary-color;
+            }
+
+            @include media(md) {
+                @include size($navbar-wrapper-width, auto);
+                margin-top: unquote($default-header-height-xs / 2 + 'px');
+                overflow: hidden;
+                border-bottom: 1px solid $secondary-color;
+            }
+        }
+
+        .navbar-lower {
+            @include position(absolute, null, null, 0);
+
+            ul {
+                li {
+                    a {
+                        @include active-element {
+                            background: $primary-color;
+                            @include border-radius($default-border-radius, false, true, true, false, false);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.sticky {
+        @include background($light-color);
+        @include borders(1px, solid, $light-border-color, null, null, true);
+    }
+
+    .navbar-toggle {
+        @include border-radius(null, false);
+
+        &.pull-left {
+            //@include margin(null, 0, null, $default-margin);
+        }
+    }
+
+    .navbar-collapse {
+        .navbar-nav {
+            li {
+                &.active {
+                }
+
+                a {
+                    @include active-element {
+                        background: none;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar-header {
+        .dropdown {
+            @include padding($default-padding);
+            @include position(absolute, null);
+            line-height: unquote($header-brand-line-height + 'px');
+        }
+    }
+
+    .navbar-brand {
+        > .logo {
+            height: $logo-height;
+            width: $logo-width;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-image: $logo-image;
+            z-index: 1001;
+        }
+    }
+
+    .navbar-right {
+        .dropdown-menu {
+            @include padding(0);
+
+            li {
+                a {
+                    $y-pad: unquote((($base-padding) / 3) + 'px');
+                    @include padding($y-pad, $default-padding, $y-pad, $default-padding);
+                }
+            }
+        }
+    }
+}
+
+/* #endregion */
+
+/* #region button overrides */
+
+.btn {
+    @include border-radius(null, false);
+    min-width: $min-button-width;
+
+    &.active, &:active {
+        @include box-shadow(true);
+    }
+
+    &.btn-primary {
+        @include borders(1px, solid, $primary-color, true);
+        background: $primary-color;
+
+        @include active-element {
+            @include borders(1px, solid, $primary-stroke-color, true);
+            background: $primary-stroke-color;
+        }
+    }
+
+    &.btn-secondary {
+        @include borders(1px, solid, $secondary-color, true);
+        background: $secondary-color;
+
+        @include active-element {
+            @include borders(1px, solid, $secondary-stroke-color, true);
+            background: $secondary-stroke-color;
+        }
+    }
+
+    &.btn-main {
+        @include borders(1px, solid, $main-color, true);
+        background: $main-color;
+
+        @include active-element {
+            @include borders(1px, solid, $main-stroke-color, true);
+            color: $light-font-color;
+            background: $main-stroke-color;
+        }
+    }
+
+    &.btn-success {
+        @include borders(1px, solid, $success-stroke-color, true);
+        background: $success-color;
+        color: $success-stroke-color;
+
+        @include active-element {
+            @include borders(1px, solid, darken($success-stroke-color, $border-darken-value), true);
+            background: darken($success-stroke-color, $hover-darken-value);
+        }
+    }
+
+    &.btn-warning {
+        @include borders(1px, solid, $warning-stroke-color, true);
+        background: $warning-color;
+        color: $warning-stroke-color;
+
+        @include active-element {
+            @include borders(1px, solid, darken($warning-stroke-color, $border-darken-value), true);
+            background: darken($warning-stroke-color, $hover-darken-value);
+        }
+    }
+
+    &.btn-danger {
+        @include borders(1px, solid, $danger-stroke-color, true);
+        background: $danger-color;
+        color: $danger-stroke-color;
+
+        @include active-element {
+            @include borders(1px, solid, darken($danger-stroke-color, $border-darken-value), true);
+            background: darken($danger-stroke-color, $hover-darken-value);
+        }
+    }
+
+    &.btn-info {
+        @include borders(1px, solid, $info-stroke-color, true);
+        background: $info-color;
+        color: $info-stroke-color;
+
+        @include active-element {
+            @include borders(1px, solid, darken($info-stroke-color, $border-darken-value), true);
+            background: darken($info-stroke-color, $hover-darken-value);
+        }
+    }
+
+    &.btn-default {
+        @include borders(1px, solid, darken($light-color, $border-darken-value), true);
+        background: $light-color;
+        color: $dark-font-color;
+
+        @include active-element {
+            @include borders(1px, solid, darken($light-color, $border-darken-value * 2), true);
+            background: darken($light-color, $hover-darken-value * 3);
+        }
+    }
+}
+
+/* #endregion */
+
+/* #region text overrides */
+
+.text-primary {
+    color: $primary-color;
+}
+
+.text-success {
+    color: $success-stroke-color;
+}
+
+.text-danger {
+    color: $danger-stroke-color;
+}
+
+.text-warning {
+    color: darken($warning-color, 10%);
+}
+
+.text-info {
+    color: $info-stroke-color;
+}
+
+/* #endregion */
+
+/* #region popover overrides */
+
+.popover {
+    @include padding(0);
+    border: 0;
+    border-radius: 0;
+    background-color: transparent !important;
+
+    .arrow {
+        border-top-color: $light-color;
+
+        &:after {
+            border-top-color: $light-color;
+        }
+    }
+
+    &.top, &.top-left, &.top-right {
+        @extend .arrow;
+    }
+
+    &.right {
+        @extend .arrow;
+    }
+
+    &.bottom, &.bottom-left, &.bottom-right {
+        @extend .arrow;
+    }
+
+    &.left {
+        @extend .arrow;
+    }
+}
+
+.popover-title {
+    @include borders(1px, solid, darken($primary-color, $border-darken-value), true);
+    @include border-radius(null, false, true, true, false, false);
+    color: $light-font-color;
+    background-color: $primary-color;
+    border-bottom: darken($primary-color, $border-darken-value);
+}
+
+.popover-content {
+    @include borders(1px, solid, $light-border-color, false, true, true, true);
+    @include border-radius(null, false, false, false, true, true);
+    @include padding(0, 0);
+    background: $default-color;
+    color: $dark-font-color;
+    -webkit-overflow-scrolling: touch;
+    overflow: auto;
+}
+
+/* #endregion */
+
+/* #region panel overrides */
+
+.panel {
+    @include border-radius(null, false);
+}
+
+/* #endregion */
+
+/* #region modal dialog overrides */
+
+.modal {
+    .modal-dialog {
+        .modal-content {
+            @include border-radius(null, false);
+
+            .modal-header {
+                @include border-radius(null, false, true, true, false, false);
+                background: $main-color;
+                color: $light-font-color;
+            }
+
+            .close {
+                @include opacity(1);
+                color: $light-font-color;
+
+                @include active-element {
+                    color: darken($light-font-color, $hover-darken-value);
+                }
+            }
+
+            .modal-body {
+                @include padding(0);
+            }
+        }
+
+        @include media(xs) {
+            @include margin(0);
+            @include size(auto, 100%);
+            @include position(relative, null);
+
+            .modal-content {
+                @include size(auto);
+                @include position(absolute, 0);
+                box-shadow: none;
+                border: 0;
+                border-radius: 0;
+            }
+        }
+    }
+}
+
+/* #endregion */
+
+/* #region alert overrides */
+
+.alert {
+    @include border-radius(0, true);
+    @include box-shadow(false);
+}
+
+.alert-warning {
+    @extend .alert;
+    color: $warning-stroke-color;
+    background: $warning-color;
+    @include borders(1px, solid, $warning-stroke-color, true);
+}
+
+.alert-danger {
+    @extend .alert;
+    color: $danger-stroke-color;
+    background: $danger-color;
+    @include borders(1px, solid, $danger-stroke-color, true);
+}
+
+.alert-success {
+    @extend .alert;
+    color: $success-stroke-color;
+    background: $success-color;
+    @include borders(1px, solid, $success-stroke-color, true);
+}
+
+.alert-info {
+    @extend .alert;
+    color: $info-stroke-color;
+    background: $info-color;
+    @include borders(1px, solid, $info-stroke-color, true);
+}
+
+/* #endregion */
+
+/* #region label overrides */
+
+.label {
+    @include border-radius(0, true);
+    @include box-shadow(false);
+}
+
+.label-primary {
+    @extend .label;
+    color: $light-color;
+    background: $primary-color;
+    @include borders(1px, solid, $primary-stroke-color, true);
+}
+
+.label-warning {
+    @extend .label;
+    color: $warning-stroke-color;
+    background: $warning-color;
+    @include borders(1px, solid, $warning-stroke-color, true);
+}
+
+.label-danger {
+    @extend .label;
+    color: $danger-stroke-color;
+    background: $danger-color;
+    @include borders(1px, solid, $danger-stroke-color, true);
+}
+
+.label-success {
+    @extend .label;
+    color: $success-stroke-color;
+    background: $success-color;
+    @include borders(1px, solid, $success-stroke-color, true);
+}
+
+.label-info {
+    @extend .label;
+    color: $info-stroke-color;
+    background: $info-color;
+    @include borders(1px, solid, $info-stroke-color, true);
+}
+
+/* #endregion */
+
+/* #region input overrides */
+
+.input-group {
+    width: 100%;
+
+    @include active-element {
+        border-color: $primary-color;
+    }
+
+    .input-group-addon {
+        @include border-radius(null, false);
+        background-color: transparent;
+        width: $input-group-addon-width;
+    }
+}
+
+
+.form-group {
+    @include position(relative, null);
+    @include margin(null, null, unquote(($base-margin / 3) + 'px'));
+
+    @include media(xs) {
+        @include margin(null, null, unquote(($base-margin / 3) + 'px !important' ));
+    }
+
+    @include media(sm) {
+        @include margin(null, null, unquote(($base-margin / 3) + 'px !important'));
+    }
+
+    .fa {
+        $position: unquote(($base-padding / 2) + 'px');
+        @include position(absolute, $position, null, null, $default-margin);
+        font-size: 1.4em;
+        z-index: 5;
+    }
+
+    .form-control {
+        @include padding(null, null, null, unquote(($base-padding * 3) + 'px'));
+        background-color: darken($light-color, $hover-darken-value * 1.5);
+
+        @include border-radius(null, false);
+
+        @include media (sm) {
+            width: 100%;
+        }
+
+        &:disabled {
+            @include opacity(0.65);
+            background-color: darken($light-color, 20%);
+        }
+    }
+
+    .dropdown-toggle {
+        @include padding(null, null, null, unquote(($base-padding * 3) + 'px'));
+        background-color: darken($light-color, $hover-darken-value * 1.5);
+        width: 100%;
+        text-align: left;
+    }
+}
+
+.help-block {
+    $top-margin: ($base-margin / 3) * 2;
+    @include margin(null, null, $top-margin + px, null);
+}
+
+/* #endregion */
+
+/* #region well overrides */
+
+.well {
+    border-radius: $default-border-radius;
+
+    &.well-lg {
+        border-radius: $default-border-radius;
+    }
+
+    &.well-sm {
+        border-radius: $default-border-radius;
+    }
+}
+
+/* #endregion */

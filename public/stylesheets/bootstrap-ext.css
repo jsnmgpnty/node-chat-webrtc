@@ -1,0 +1,882 @@
+/* #region dropdown-menu overrides */
+/* line 5, bootstrap-ext.scss */
+.typeahead {
+  max-width: 300px;
+}
+@media screen and (max-width: 767px) {
+  /* line 5, bootstrap-ext.scss */
+  .typeahead {
+    max-width: 100%;
+  }
+}
+
+/* line 13, bootstrap-ext.scss */
+.container-fluid {
+  padding-right: 30px;
+}
+
+/* line 18, bootstrap-ext.scss */
+.dropdown-menu {
+  border-top-left-radius: 4px !important;
+  border-top-right-radius: 4px !important;
+  border-bottom-left-radius: 4px !important;
+  border-bottom-right-radius: 4px !important;
+  width: 100%;
+  height: auto;
+  background: white;
+}
+/* line 26, bootstrap-ext.scss */
+.dropdown-menu > li.active a {
+  background-color: #2296f3;
+}
+/* line 31, bootstrap-ext.scss */
+.dropdown-menu > li a {
+  color: #333333;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+/* line 441, _variables.scss */
+.dropdown-menu > li a[disabled]:hover, .dropdown-menu > li a[disabled]:focus, .dropdown-menu > li a[disabled]:active, .dropdown-menu > li a[disabled]:active:focus, .dropdown-menu > li a[disabled]:active:hover, .dropdown-menu > li a[disabled]:hover:focus {
+  text-decoration: underline;
+  background: #2296f3;
+  color: white;
+}
+/* line 446, _variables.scss */
+.dropdown-menu > li a:hover, .dropdown-menu > li a:focus, .dropdown-menu > li a:active, .dropdown-menu > li a:active:focus, .dropdown-menu > li a:active:hover, .dropdown-menu > li a:hover:focus {
+  text-decoration: underline;
+  background: #2296f3;
+  color: white;
+}
+
+/* #endregion */
+/* #region datepicker overrides */
+/* line 47, bootstrap-ext.scss */
+.datepicker.dropdown-menu {
+  width: 100%;
+  height: auto;
+}
+/* line 50, bootstrap-ext.scss */
+.datepicker.dropdown-menu button {
+  outline: none;
+  border: 1px solid transparent;
+}
+/* line 54, bootstrap-ext.scss */
+.datepicker.dropdown-menu button.btn-default.btn-primary {
+  background: #2296f3;
+  color: white;
+}
+/* line 59, bootstrap-ext.scss */
+.datepicker.dropdown-menu button.btn-default:hover {
+  background: #e6e6e6;
+  color: #666666;
+}
+/* line 64, bootstrap-ext.scss */
+.datepicker.dropdown-menu button.btn-default.btn-today {
+  background: #d9d9d9;
+}
+/* line 69, bootstrap-ext.scss */
+.datepicker.dropdown-menu tbody {
+  height: 180px;
+}
+/* line 73, bootstrap-ext.scss */
+.datepicker.dropdown-menu tbody button {
+  padding: 6px;
+}
+/* line 78, bootstrap-ext.scss */
+.datepicker.dropdown-menu.datepicker-mode-1 tbody button, .datepicker.dropdown-menu.datepicker-mode-2 tbody button {
+  height: 65px;
+}
+
+/* #endregion */
+/* #region navbar overrides */
+/* line 88, bootstrap-ext.scss */
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+  background: transparent;
+  color: white;
+}
+
+/* line 93, bootstrap-ext.scss */
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 90px;
+  min-height: 90px;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  z-index: 100;
+}
+@media screen and (max-width: 767px) {
+  /* line 93, bootstrap-ext.scss */
+  .navbar {
+    height: 50px;
+    min-height: 50px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  /* line 93, bootstrap-ext.scss */
+  .navbar {
+    height: 50px;
+    min-height: 50px;
+  }
+}
+/* line 113, bootstrap-ext.scss */
+.navbar .overlay-bg {
+  width: 25%;
+  height: 90px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #2296f3;
+  border-bottom: 1px solid #2296f3;
+  z-index: 0;
+}
+/* line 121, bootstrap-ext.scss */
+.navbar .container {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  /* line 121, bootstrap-ext.scss */
+  .navbar .container {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /* line 131, bootstrap-ext.scss */
+  .navbar .container .navbar-wrapper {
+    width: 550px;
+    height: auto;
+    margin-top: 25px;
+    overflow: hidden;
+    border-bottom: 1px solid #ff9800;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  /* line 131, bootstrap-ext.scss */
+  .navbar .container .navbar-wrapper {
+    width: 550px;
+    height: auto;
+    margin-top: 25px;
+    overflow: hidden;
+    border-bottom: 1px solid #ff9800;
+  }
+}
+/* line 147, bootstrap-ext.scss */
+.navbar .container .navbar-lower {
+  position: absolute;
+  bottom: 0;
+}
+/* line 152, bootstrap-ext.scss */
+.navbar .container .navbar-lower ul li a {
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+/* line 441, _variables.scss */
+.navbar .container .navbar-lower ul li a[disabled]:hover, .navbar .container .navbar-lower ul li a[disabled]:focus, .navbar .container .navbar-lower ul li a[disabled]:active, .navbar .container .navbar-lower ul li a[disabled]:active:focus, .navbar .container .navbar-lower ul li a[disabled]:active:hover, .navbar .container .navbar-lower ul li a[disabled]:hover:focus {
+  background: #2296f3;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+/* line 446, _variables.scss */
+.navbar .container .navbar-lower ul li a:hover, .navbar .container .navbar-lower ul li a:focus, .navbar .container .navbar-lower ul li a:active, .navbar .container .navbar-lower ul li a:active:focus, .navbar .container .navbar-lower ul li a:active:hover, .navbar .container .navbar-lower ul li a:hover:focus {
+  background: #2296f3;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+/* line 163, bootstrap-ext.scss */
+.navbar.sticky {
+  background: white;
+  border-bottom: 1px solid #e6e6e6;
+}
+/* line 168, bootstrap-ext.scss */
+.navbar .navbar-toggle {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+/* line 182, bootstrap-ext.scss */
+.navbar .navbar-collapse .navbar-nav li a {
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+/* line 441, _variables.scss */
+.navbar .navbar-collapse .navbar-nav li a[disabled]:hover, .navbar .navbar-collapse .navbar-nav li a[disabled]:focus, .navbar .navbar-collapse .navbar-nav li a[disabled]:active, .navbar .navbar-collapse .navbar-nav li a[disabled]:active:focus, .navbar .navbar-collapse .navbar-nav li a[disabled]:active:hover, .navbar .navbar-collapse .navbar-nav li a[disabled]:hover:focus {
+  background: none;
+  text-decoration: underline;
+}
+/* line 446, _variables.scss */
+.navbar .navbar-collapse .navbar-nav li a:hover, .navbar .navbar-collapse .navbar-nav li a:focus, .navbar .navbar-collapse .navbar-nav li a:active, .navbar .navbar-collapse .navbar-nav li a:active:focus, .navbar .navbar-collapse .navbar-nav li a:active:hover, .navbar .navbar-collapse .navbar-nav li a:hover:focus {
+  background: none;
+  text-decoration: underline;
+}
+/* line 193, bootstrap-ext.scss */
+.navbar .navbar-header .dropdown {
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  position: absolute;
+  line-height: 20px;
+}
+/* line 201, bootstrap-ext.scss */
+.navbar .navbar-brand > .logo {
+  height: 80px;
+  width: 105px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("../../images/brand.png");
+  z-index: 1001;
+}
+/* line 213, bootstrap-ext.scss */
+.navbar .navbar-right .dropdown-menu {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+}
+/* line 217, bootstrap-ext.scss */
+.navbar .navbar-right .dropdown-menu li a {
+  padding-top: 5px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+}
+
+/* #endregion */
+/* #region button overrides */
+/* line 230, bootstrap-ext.scss */
+.btn {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  min-width: 100px;
+}
+/* line 234, bootstrap-ext.scss */
+.btn.active, .btn:active {
+  box-shadow: inset 0 0 10px 0 #aaaaaa;
+  box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+/* line 238, bootstrap-ext.scss */
+.btn.btn-primary {
+  border-top: 1px solid #2296f3;
+  border-right: 1px solid #2296f3;
+  border-bottom: 1px solid #2296f3;
+  border-left: 1px solid #2296f3;
+  background: #2296f3;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+/* line 441, _variables.scss */
+.btn.btn-primary[disabled]:hover, .btn.btn-primary[disabled]:focus, .btn.btn-primary[disabled]:active, .btn.btn-primary[disabled]:active:focus, .btn.btn-primary[disabled]:active:hover, .btn.btn-primary[disabled]:hover:focus {
+  border-top: 1px solid #1f85d8;
+  border-right: 1px solid #1f85d8;
+  border-bottom: 1px solid #1f85d8;
+  border-left: 1px solid #1f85d8;
+  background: #1f85d8;
+}
+/* line 446, _variables.scss */
+.btn.btn-primary:hover, .btn.btn-primary:focus, .btn.btn-primary:active, .btn.btn-primary:active:focus, .btn.btn-primary:active:hover, .btn.btn-primary:hover:focus {
+  border-top: 1px solid #1f85d8;
+  border-right: 1px solid #1f85d8;
+  border-bottom: 1px solid #1f85d8;
+  border-left: 1px solid #1f85d8;
+  background: #1f85d8;
+}
+/* line 248, bootstrap-ext.scss */
+.btn.btn-secondary {
+  border-top: 1px solid #ff9800;
+  border-right: 1px solid #ff9800;
+  border-bottom: 1px solid #ff9800;
+  border-left: 1px solid #ff9800;
+  background: #ff9800;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+/* line 441, _variables.scss */
+.btn.btn-secondary[disabled]:hover, .btn.btn-secondary[disabled]:focus, .btn.btn-secondary[disabled]:active, .btn.btn-secondary[disabled]:active:focus, .btn.btn-secondary[disabled]:active:hover, .btn.btn-secondary[disabled]:hover:focus {
+  border-top: 1px solid #e98c04;
+  border-right: 1px solid #e98c04;
+  border-bottom: 1px solid #e98c04;
+  border-left: 1px solid #e98c04;
+  background: #e98c04;
+}
+/* line 446, _variables.scss */
+.btn.btn-secondary:hover, .btn.btn-secondary:focus, .btn.btn-secondary:active, .btn.btn-secondary:active:focus, .btn.btn-secondary:active:hover, .btn.btn-secondary:hover:focus {
+  border-top: 1px solid #e98c04;
+  border-right: 1px solid #e98c04;
+  border-bottom: 1px solid #e98c04;
+  border-left: 1px solid #e98c04;
+  background: #e98c04;
+}
+/* line 258, bootstrap-ext.scss */
+.btn.btn-main {
+  border-top: 1px solid #333333;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #333333;
+  background: #333333;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+/* line 441, _variables.scss */
+.btn.btn-main[disabled]:hover, .btn.btn-main[disabled]:focus, .btn.btn-main[disabled]:active, .btn.btn-main[disabled]:active:focus, .btn.btn-main[disabled]:active:hover, .btn.btn-main[disabled]:hover:focus {
+  border-top: 1px solid #232323;
+  border-right: 1px solid #232323;
+  border-bottom: 1px solid #232323;
+  border-left: 1px solid #232323;
+  color: white;
+  background: #232323;
+}
+/* line 446, _variables.scss */
+.btn.btn-main:hover, .btn.btn-main:focus, .btn.btn-main:active, .btn.btn-main:active:focus, .btn.btn-main:active:hover, .btn.btn-main:hover:focus {
+  border-top: 1px solid #232323;
+  border-right: 1px solid #232323;
+  border-bottom: 1px solid #232323;
+  border-left: 1px solid #232323;
+  color: white;
+  background: #232323;
+}
+/* line 269, bootstrap-ext.scss */
+.btn.btn-success {
+  border-top: 1px solid #009103;
+  border-right: 1px solid #009103;
+  border-bottom: 1px solid #009103;
+  border-left: 1px solid #009103;
+  background: #cff8d0;
+  color: #009103;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+/* line 441, _variables.scss */
+.btn.btn-success[disabled]:hover, .btn.btn-success[disabled]:focus, .btn.btn-success[disabled]:active, .btn.btn-success[disabled]:active:focus, .btn.btn-success[disabled]:active:hover, .btn.btn-success[disabled]:hover:focus {
+  border-top: 1px solid #007702;
+  border-right: 1px solid #007702;
+  border-bottom: 1px solid #007702;
+  border-left: 1px solid #007702;
+  background: #007702;
+}
+/* line 446, _variables.scss */
+.btn.btn-success:hover, .btn.btn-success:focus, .btn.btn-success:active, .btn.btn-success:active:focus, .btn.btn-success:active:hover, .btn.btn-success:hover:focus {
+  border-top: 1px solid #007702;
+  border-right: 1px solid #007702;
+  border-bottom: 1px solid #007702;
+  border-left: 1px solid #007702;
+  background: #007702;
+}
+/* line 280, bootstrap-ext.scss */
+.btn.btn-warning {
+  border-top: 1px solid #333333;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #333333;
+  background: #ffcc00;
+  color: #333333;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+/* line 441, _variables.scss */
+.btn.btn-warning[disabled]:hover, .btn.btn-warning[disabled]:focus, .btn.btn-warning[disabled]:active, .btn.btn-warning[disabled]:active:focus, .btn.btn-warning[disabled]:active:hover, .btn.btn-warning[disabled]:hover:focus {
+  border-top: 1px solid #262626;
+  border-right: 1px solid #262626;
+  border-bottom: 1px solid #262626;
+  border-left: 1px solid #262626;
+  background: #262626;
+}
+/* line 446, _variables.scss */
+.btn.btn-warning:hover, .btn.btn-warning:focus, .btn.btn-warning:active, .btn.btn-warning:active:focus, .btn.btn-warning:active:hover, .btn.btn-warning:hover:focus {
+  border-top: 1px solid #262626;
+  border-right: 1px solid #262626;
+  border-bottom: 1px solid #262626;
+  border-left: 1px solid #262626;
+  background: #262626;
+}
+/* line 291, bootstrap-ext.scss */
+.btn.btn-danger {
+  border-top: 1px solid #ad0000;
+  border-right: 1px solid #ad0000;
+  border-bottom: 1px solid #ad0000;
+  border-left: 1px solid #ad0000;
+  background: #ff6666;
+  color: #ad0000;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+/* line 441, _variables.scss */
+.btn.btn-danger[disabled]:hover, .btn.btn-danger[disabled]:focus, .btn.btn-danger[disabled]:active, .btn.btn-danger[disabled]:active:focus, .btn.btn-danger[disabled]:active:hover, .btn.btn-danger[disabled]:hover:focus {
+  border-top: 1px solid #940000;
+  border-right: 1px solid #940000;
+  border-bottom: 1px solid #940000;
+  border-left: 1px solid #940000;
+  background: #940000;
+}
+/* line 446, _variables.scss */
+.btn.btn-danger:hover, .btn.btn-danger:focus, .btn.btn-danger:active, .btn.btn-danger:active:focus, .btn.btn-danger:active:hover, .btn.btn-danger:hover:focus {
+  border-top: 1px solid #940000;
+  border-right: 1px solid #940000;
+  border-bottom: 1px solid #940000;
+  border-left: 1px solid #940000;
+  background: #940000;
+}
+/* line 302, bootstrap-ext.scss */
+.btn.btn-info {
+  border-top: 1px solid #347abb;
+  border-right: 1px solid #347abb;
+  border-bottom: 1px solid #347abb;
+  border-left: 1px solid #347abb;
+  background: #8ac5fc;
+  color: #347abb;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+/* line 441, _variables.scss */
+.btn.btn-info[disabled]:hover, .btn.btn-info[disabled]:focus, .btn.btn-info[disabled]:active, .btn.btn-info[disabled]:active:focus, .btn.btn-info[disabled]:active:hover, .btn.btn-info[disabled]:hover:focus {
+  border-top: 1px solid #2e6da7;
+  border-right: 1px solid #2e6da7;
+  border-bottom: 1px solid #2e6da7;
+  border-left: 1px solid #2e6da7;
+  background: #2e6da7;
+}
+/* line 446, _variables.scss */
+.btn.btn-info:hover, .btn.btn-info:focus, .btn.btn-info:active, .btn.btn-info:active:focus, .btn.btn-info:active:hover, .btn.btn-info:hover:focus {
+  border-top: 1px solid #2e6da7;
+  border-right: 1px solid #2e6da7;
+  border-bottom: 1px solid #2e6da7;
+  border-left: 1px solid #2e6da7;
+  background: #2e6da7;
+}
+/* line 313, bootstrap-ext.scss */
+.btn.btn-default {
+  border-top: 1px solid #f2f2f2;
+  border-right: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+  border-left: 1px solid #f2f2f2;
+  background: white;
+  color: #333333;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+/* line 441, _variables.scss */
+.btn.btn-default[disabled]:hover, .btn.btn-default[disabled]:focus, .btn.btn-default[disabled]:active, .btn.btn-default[disabled]:active:focus, .btn.btn-default[disabled]:active:hover, .btn.btn-default[disabled]:hover:focus {
+  border-top: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+  background: #d9d9d9;
+}
+/* line 446, _variables.scss */
+.btn.btn-default:hover, .btn.btn-default:focus, .btn.btn-default:active, .btn.btn-default:active:focus, .btn.btn-default:active:hover, .btn.btn-default:hover:focus {
+  border-top: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+  background: #d9d9d9;
+}
+
+/* #endregion */
+/* #region text overrides */
+/* line 329, bootstrap-ext.scss */
+.text-primary {
+  color: #2296f3;
+}
+
+/* line 333, bootstrap-ext.scss */
+.text-success {
+  color: #009103;
+}
+
+/* line 337, bootstrap-ext.scss */
+.text-danger {
+  color: #ad0000;
+}
+
+/* line 341, bootstrap-ext.scss */
+.text-warning {
+  color: #cca300;
+}
+
+/* line 345, bootstrap-ext.scss */
+.text-info {
+  color: #347abb;
+}
+
+/* #endregion */
+/* #region popover overrides */
+/* line 353, bootstrap-ext.scss */
+.popover {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent !important;
+}
+/* line 359, bootstrap-ext.scss */
+.popover .arrow, .popover .popover.top, .popover .popover.top-left, .popover .popover.top-right, .popover .popover.right, .popover .popover.bottom, .popover .popover.bottom-left, .popover .popover.bottom-right, .popover .popover.left {
+  border-top-color: white;
+}
+/* line 362, bootstrap-ext.scss */
+.popover .arrow:after, .popover .popover.top:after, .popover .popover.top-left:after, .popover .popover.top-right:after, .popover .popover.right:after, .popover .popover.bottom:after, .popover .popover.bottom-left:after, .popover .popover.bottom-right:after, .popover .popover.left:after {
+  border-top-color: white;
+}
+
+/* line 384, bootstrap-ext.scss */
+.popover-title {
+  border-top: 1px solid #0d8aef;
+  border-right: 1px solid #0d8aef;
+  border-bottom: 1px solid #0d8aef;
+  border-left: 1px solid #0d8aef;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  color: white;
+  background-color: #2296f3;
+  border-bottom: #0d8aef;
+}
+
+/* line 392, bootstrap-ext.scss */
+.popover-content {
+  border-right: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  background: white;
+  color: #333333;
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+}
+
+/* #endregion */
+/* #region panel overrides */
+/* line 406, bootstrap-ext.scss */
+.panel {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* #endregion */
+/* #region modal dialog overrides */
+/* line 416, bootstrap-ext.scss */
+.modal .modal-dialog .modal-content {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+/* line 419, bootstrap-ext.scss */
+.modal .modal-dialog .modal-content .modal-header {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  background: #333333;
+  color: white;
+}
+/* line 425, bootstrap-ext.scss */
+.modal .modal-dialog .modal-content .close {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  color: white;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+/* line 441, _variables.scss */
+.modal .modal-dialog .modal-content .close[disabled]:hover, .modal .modal-dialog .modal-content .close[disabled]:focus, .modal .modal-dialog .modal-content .close[disabled]:active, .modal .modal-dialog .modal-content .close[disabled]:active:focus, .modal .modal-dialog .modal-content .close[disabled]:active:hover, .modal .modal-dialog .modal-content .close[disabled]:hover:focus {
+  color: #f2f2f2;
+}
+/* line 446, _variables.scss */
+.modal .modal-dialog .modal-content .close:hover, .modal .modal-dialog .modal-content .close:focus, .modal .modal-dialog .modal-content .close:active, .modal .modal-dialog .modal-content .close:active:focus, .modal .modal-dialog .modal-content .close:active:hover, .modal .modal-dialog .modal-content .close:hover:focus {
+  color: #f2f2f2;
+}
+/* line 434, bootstrap-ext.scss */
+.modal .modal-dialog .modal-content .modal-body {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+}
+@media screen and (max-width: 767px) {
+  /* line 415, bootstrap-ext.scss */
+  .modal .modal-dialog {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    width: auto;
+    height: 100%;
+    position: relative;
+  }
+  /* line 444, bootstrap-ext.scss */
+  .modal .modal-dialog .modal-content {
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    box-shadow: none;
+    border: 0;
+    border-radius: 0;
+  }
+}
+
+/* #endregion */
+/* #region alert overrides */
+/* line 459, bootstrap-ext.scss */
+.alert, .alert-warning, .alert-danger, .alert-success, .alert-info {
+  border-top-left-radius: 4px !important;
+  border-top-right-radius: 4px !important;
+  border-bottom-left-radius: 4px !important;
+  border-bottom-right-radius: 4px !important;
+  box-shadow: 0 2px 4px 0 #cccccc;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* line 464, bootstrap-ext.scss */
+.alert-warning {
+  color: #333333;
+  background: #ffcc00;
+  border-top: 1px solid #333333;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #333333;
+}
+
+/* line 471, bootstrap-ext.scss */
+.alert-danger {
+  color: #ad0000;
+  background: #ff6666;
+  border-top: 1px solid #ad0000;
+  border-right: 1px solid #ad0000;
+  border-bottom: 1px solid #ad0000;
+  border-left: 1px solid #ad0000;
+}
+
+/* line 478, bootstrap-ext.scss */
+.alert-success {
+  color: #009103;
+  background: #cff8d0;
+  border-top: 1px solid #009103;
+  border-right: 1px solid #009103;
+  border-bottom: 1px solid #009103;
+  border-left: 1px solid #009103;
+}
+
+/* line 485, bootstrap-ext.scss */
+.alert-info {
+  color: #347abb;
+  background: #8ac5fc;
+  border-top: 1px solid #347abb;
+  border-right: 1px solid #347abb;
+  border-bottom: 1px solid #347abb;
+  border-left: 1px solid #347abb;
+}
+
+/* #endregion */
+/* #region label overrides */
+/* line 496, bootstrap-ext.scss */
+.label, .label-primary, .label-warning, .label-danger, .label-success, .label-info {
+  border-top-left-radius: 4px !important;
+  border-top-right-radius: 4px !important;
+  border-bottom-left-radius: 4px !important;
+  border-bottom-right-radius: 4px !important;
+  box-shadow: 0 2px 4px 0 #cccccc;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* line 501, bootstrap-ext.scss */
+.label-primary {
+  color: white;
+  background: #2296f3;
+  border-top: 1px solid #1f85d8;
+  border-right: 1px solid #1f85d8;
+  border-bottom: 1px solid #1f85d8;
+  border-left: 1px solid #1f85d8;
+}
+
+/* line 508, bootstrap-ext.scss */
+.label-warning {
+  color: #333333;
+  background: #ffcc00;
+  border-top: 1px solid #333333;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #333333;
+}
+
+/* line 515, bootstrap-ext.scss */
+.label-danger {
+  color: #ad0000;
+  background: #ff6666;
+  border-top: 1px solid #ad0000;
+  border-right: 1px solid #ad0000;
+  border-bottom: 1px solid #ad0000;
+  border-left: 1px solid #ad0000;
+}
+
+/* line 522, bootstrap-ext.scss */
+.label-success {
+  color: #009103;
+  background: #cff8d0;
+  border-top: 1px solid #009103;
+  border-right: 1px solid #009103;
+  border-bottom: 1px solid #009103;
+  border-left: 1px solid #009103;
+}
+
+/* line 529, bootstrap-ext.scss */
+.label-info {
+  color: #347abb;
+  background: #8ac5fc;
+  border-top: 1px solid #347abb;
+  border-right: 1px solid #347abb;
+  border-bottom: 1px solid #347abb;
+  border-left: 1px solid #347abb;
+}
+
+/* #endregion */
+/* #region input overrides */
+/* line 540, bootstrap-ext.scss */
+.input-group {
+  width: 100%;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+/* line 441, _variables.scss */
+.input-group[disabled]:hover, .input-group[disabled]:focus, .input-group[disabled]:active, .input-group[disabled]:active:focus, .input-group[disabled]:active:hover, .input-group[disabled]:hover:focus {
+  border-color: #2296f3;
+}
+/* line 446, _variables.scss */
+.input-group:hover, .input-group:focus, .input-group:active, .input-group:active:focus, .input-group:active:hover, .input-group:hover:focus {
+  border-color: #2296f3;
+}
+/* line 547, bootstrap-ext.scss */
+.input-group .input-group-addon {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: transparent;
+  width: 40px;
+}
+
+/* line 555, bootstrap-ext.scss */
+.form-group {
+  position: relative;
+  margin-bottom: 5px;
+}
+@media screen and (max-width: 767px) {
+  /* line 555, bootstrap-ext.scss */
+  .form-group {
+    margin-bottom: 5px !important;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  /* line 555, bootstrap-ext.scss */
+  .form-group {
+    margin-bottom: 5px !important;
+  }
+}
+/* line 567, bootstrap-ext.scss */
+.form-group .fa {
+  position: absolute;
+  top: 7.5px;
+  left: 15px;
+  font-size: 1.4em;
+  z-index: 5;
+}
+/* line 574, bootstrap-ext.scss */
+.form-group .form-control {
+  padding-left: 45px;
+  background-color: #ececec;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  /* line 574, bootstrap-ext.scss */
+  .form-group .form-control {
+    width: 100%;
+  }
+}
+/* line 584, bootstrap-ext.scss */
+.form-group .form-control:disabled {
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  background-color: #cccccc;
+}
+/* line 590, bootstrap-ext.scss */
+.form-group .dropdown-toggle {
+  padding-left: 45px;
+  background-color: #ececec;
+  width: 100%;
+  text-align: left;
+}
+
+/* line 598, bootstrap-ext.scss */
+.help-block {
+  margin-bottom: 10px;
+}
+
+/* #endregion */
+/* #region well overrides */
+/* line 607, bootstrap-ext.scss */
+.well {
+  border-radius: 4px;
+}
+/* line 610, bootstrap-ext.scss */
+.well.well-lg {
+  border-radius: 4px;
+}
+/* line 614, bootstrap-ext.scss */
+.well.well-sm {
+  border-radius: 4px;
+}
+
+/* #endregion */

@@ -1,0 +1,27 @@
+{
+  "name": "chattify",
+  "authors": [
+    "Jason <jsnmgpnty@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "angular": "~1.4.8",
+    "angular-bootstrap": "~0.14.3",
+    "angular-local-storage": "~0.2.3",
+    "moment": "~2.11.0",
+    "angular-file-upload": "~2.2.0",
+    "font-awesome": "fontawesome#~4.5.0"
+  }
+}

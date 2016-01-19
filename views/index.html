@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app="messenger">
+<head>
+    <title>IIS Node</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css" />
+    <link rel="stylesheet" href="bower_components/angular-bootstrap/ui-bootstrap-csp.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+    
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/bootstrap-ext.css" />
+    
+    <script src="socket.io/socket.io.js"></script>
+</head>
+<body ng-controller="messengerController">
+    <div class="container body-content">
+    	<div class="alert" ng-class="alertStyle" ng-if="alertMessage">
+    		<p>{{alertMessage}}</p>
+    	</div>
+    	<div class="chat-content">
+    		<div class="row">
+	    		<div class="col-xs-12 col-md-3">
+	    			<div class="users-list">
+	    				<div class="users-list-heading">
+	    					<h3>{{getUsersListTextHeader()}}</h3>
+	    				</div>
+	    				<div class="users-list-body">
+	    					<div class="form-group" ng-show="!isSignedIn">
+			    				<i class="fa fa-lock" ng-click="signIn()"></i>
+			    				<input type="text" class="form-control" ng-model="user.id" />
+			    			</div>
+	    					<ul class="list-group users">
+								<li class="list-group-item user" ng-repeat="user in users" ng-click="openChat(user)">
+									<span class="text-success glyphicon glyphicon-user"></span>
+									{{user}}
+									<span class="pull-right label label-info">{{getNumberOfMessages(user)}}</span>
+								</li>
+							</ul>
+							<div class="btn btn-danger btn-block" ng-click="signOut()" ng-show="isSignedIn">
+								Sign out
+							</div>
+	    				</div>
+	    			</div>
+	    		</div>
+	    		<div class="col-xs-12 col-md-9">
+	    			<div class="chat-window" ng-if="activeChatWindow">
+	    				<div class="chat-window-heading">
+	    					<h3>Chatting with user {{activeChatWindow.chatMateId}}</h3>
+	    				</div>
+		    			<div class="chat-window-body">
+		    				<div chat-window messages="activeChatWindow.messages" user-id="user.id" chat-mate-id="activeChatWindow.chatMateId"></div>
+		    			</div>
+	    			</div>
+	    		</div>
+	    	</div>
+    	</div>
+    </div>
+    
+    
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/moment/min/moment-with-locales.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <!--<script src="bower_components/angular-file-upload/dist/angular-file-upload.js"></script>-->
+    <script src="bower_components/angular-local-storage/dist/angular-local-storage.js"></script>
+    
+    <script src="js/messenger/messenger.js"></script>
+    <script src="js/messenger/services/socketsService.js"></script>
+    <script src="js/messenger/controllers/messengerController.js"></script>
+    <script src="js/messenger/directives/chatWindow.js"></script>
+    <script src="js/messenger/directives/fileRead.js"></script>
+</body>
+</html>
